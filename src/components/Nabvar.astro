@@ -1,0 +1,24 @@
+---
+const links = [
+    {name: 'Inicio', href: '/'},
+    {name: 'Nuestro Equipo', href: '/about'},
+    {name: 'Servicios', href: '/contact'}, 
+]
+    import Darkmode from './Darkmode.astro';
+---
+<div class="min-w-64 h-40 bg-[#fbfbfb] dark:bg-[#282829]" >
+    <nav class="flex justify-evenly items-center p-4 dark:bg-[#282829] min-w-64 h-16 ">
+        <img src="/src/assets/fonts/logo.png" alt="logo" class="w-32 h-10 bg-[orange]  ml-50 mr-10 " />
+        <ul class="flex justify-between gap-x-5 text-[#1E1E1E] dark:text-[#ffffffeb] font-segoe font-normal text-lg  ml-80 mr-50 h-15 items-center">
+            {links.map(link => (
+            <li><a href={link.href} class="border-b-2 border-transparent  hover:border-red-400  text-black-800 hover:text-black-500 pb-3">{link.name}</a></li>))}
+        </ul>
+        <button class="flex items-center justify-center h-8 py-1.5 px-5 rounded-sm font-segoe text-sm text-[#F5F5F7] bg-[#5137F0] ml-40">
+            Conocenos
+        </button>
+        <button class=" gap-x-20 pt-10" id="theme-toggle">
+            <Darkmode />
+        </button>
+    </nav>
+</div>
+
