@@ -1,13 +1,14 @@
 ---
 import LanguageBar from "@components/LanguageBar.astro"
 import Select from "@components/Select.astro"
+import Navbar from "@components/Navbar.astro"
 import "@styles/global.css"
 ---
 
 
 
 <!doctype html>
-<html lang="en" class="">
+<html lang="en" id="main-container" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -15,8 +16,10 @@ import "@styles/global.css"
 		<meta name="generator" content={Astro.generator} />
 		<title>Slyfox - Desarrolla tus ideas</title>
 	</head>
+
 	<body>
 		<LanguageBar />
+		<Navbar />
 		<slot />
 	</body>
 </html>

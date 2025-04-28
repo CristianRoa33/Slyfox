@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets"
+
+import LogoLight from "@images/logo-slyfox-light.webp"
+import LogoDark from "@images/logo-slyfox-dark.webp"
+---
+
+
+
+<div>
+    <Image 
+        class="dark:hidden"
+        src={LogoLight} 
+        alt="Logo de la empresa Slyfox" 
+    />
+
+    <Image 
+        class="hidden dark:inline w-[51px] sm:w-[71px] lg:w-[180px]"
+        src={LogoDark} 
+        alt="Una descripción de mi imagen."
+    />
+</div>
