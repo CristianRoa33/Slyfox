@@ -3,11 +3,13 @@ import { Image } from "astro:assets"
 
 import LogoLight from "@images/logo-slyfox-light.webp"
 import LogoDark from "@images/logo-slyfox-dark.webp"
+
+const {width} = Astro.props;
 ---
 
 
 
-<div>
+<div style={"width: " + width}>
     <Image 
         class="dark:hidden"
         src={LogoLight} 
