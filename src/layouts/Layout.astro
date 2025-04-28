@@ -1,5 +1,6 @@
 ---
 import LanguageBar from "@components/LanguageBar.astro"
+import Nabvar from "@components/Nabvar.astro"
 import Select from "@components/Select.astro"
 import Navbar from "@components/Navbar.astro"
 import "@styles/global.css"
@@ -8,7 +9,7 @@ import "@styles/global.css"
 
 
 <!doctype html>
-<html lang="en" id="main-container" class="dark">
+<html lang="en" class="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,7 +20,7 @@ import "@styles/global.css"
 
 	<body>
 		<LanguageBar />
-		<Navbar />
+		<Nabvar />
 		<slot />
 	</body>
 </html>
