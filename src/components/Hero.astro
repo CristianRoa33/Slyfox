@@ -1,59 +1,70 @@
 ---
 import Logo from "./Logo.astro";
-
-
 ---
 
 <div class="w-full bg-[#F5F6FA] dark:bg-[#0D0D0D]">
-    <div class="flex flex-col items-center justify-center text-center px-2.5 sm:px-36 2xl:px-[400px] py-2.5 sm:py-36 2xl:py-[400px]">
-        <Logo />
-        <h1 class="
-            text-base sm:text-3xl lg:text-6xl 
-            text-[#31323D] dark:text-[#F5F5F7] 
+  <div
+    class="flex flex-col items-center justify-center text-center px-2.5 sm:px-36 2xl:px-[400px] py-2.5 sm:py-36 2xl:py-[400px]"
+  >
+    <Logo />
+    <h1
+      class="text-base sm:text-3xl lg:text-6xl
+            text-[#31323D] dark:text-[#F5F5F7]
             font-bold font-satoshi
             mt-5 sm:mt-16 xl:mt-28
-            mb-2 sm:mb-10 xl:mb-20
-            ">Transformamos Ideas<br>en Experiencia<span class="text-[#FF7070] inline-block title-dot">.</span></h1>
-        <h2 class="text-xs lg:text-2xl font-bold text-[#36455D] dark:text-[#86868B]">Software a la medida optimizado para SEO. Creamos aplicaciones web y móviles rápidas, escalables y visibles en buscadores. Potencia tu negocio con soluciones que combinan rendimiento, experiencia de usuario y conversión digital.</h2>
-    </div>
+            mb-2 sm:mb-10 xl:mb-20">
+            Transformamos Ideas<br />en Experiencia<span
+        class="text-[#FF7070] inline-block title-dot">.</span>
+    </h1>
+    <h2
+      class="text-xs lg:text-2xl font-bold text-[#36455D] dark:text-[#86868B]"
+    >
+      Software a la medida optimizado para SEO. Creamos aplicaciones web y
+      móviles rápidas, escalables y visibles en buscadores. Potencia tu negocio
+      con soluciones que combinan rendimiento, experiencia de usuario y
+      conversión digital.
+    </h2>
+  </div>
 </div>
 
 <style>
-.title-dot {
+  .title-dot {
     animation: enterdot 1s cubic-bezier(0, 0.9, 0.12, -0.06) both;
-}
+  }
 
-@keyframes enterdot {
+  @keyframes enterdot {
     0% {
-        transform: translateY(-100vh); /* Comienza fuera de la pantalla */
+      transform: translateY(-100vh); /* Comienza fuera de la pantalla */
     }
 
     40% {
-        transform: translateY(0); /* Llega a la posición final */
+      transform: translateY(0); /* Llega a la posición final */
     }
 
     50% {
-        transform: translateY(-30px); /* Primer rebote hacia arriba (más grande) */
+      transform: translateY(
+        -30px
+      ); /* Primer rebote hacia arriba (más grande) */
     }
 
     60% {
-        transform: translateY(15px); /* Rebote hacia abajo (más pronunciado) */
+      transform: translateY(15px); /* Rebote hacia abajo (más pronunciado) */
     }
 
     70% {
-        transform: translateY(-10px); /* Rebote hacia arriba más pequeño */
+      transform: translateY(-10px); /* Rebote hacia arriba más pequeño */
     }
 
     80% {
-        transform: translateY(5px); /* Rebote más pequeño aún */
+      transform: translateY(5px); /* Rebote más pequeño aún */
     }
 
     90% {
-        transform: translateY(-2px); /* Último rebote muy pequeño */
+      transform: translateY(-2px); /* Último rebote muy pequeño */
     }
 
     100% {
-        transform: translateY(0); /* Termina en su posición final */
+      transform: translateY(0); /* Termina en su posición final */
     }
-}
+  }
 </style>

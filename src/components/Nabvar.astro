@@ -1,24 +1,66 @@
 ---
 const links = [
-    {name: 'Inicio', href: '/'},
-    {name: 'Nuestro Equipo', href: '/about'},
-    {name: 'Servicios', href: '/contact'}, 
-]
-    import Darkmode from './Darkmode.astro';
+  { name: "Inicio", href: "/" },
+  { name: "Nuestro Equipo", href: "/about" },
+  { name: "Servicios", href: "/contact" },
+];
+
+import Darkmode from "./Darkmode.astro";
+import Logo from "./Logo.astro";
 ---
-<div class="min-w-64 h-40 bg-[#fbfbfb] dark:bg-[#282829]" >
-    <nav class="flex justify-evenly items-center p-4 dark:bg-[#282829] min-w-64 h-16">
-        <img src="/src/assets/fonts/Logo ligth.png"  alt="logo" class="w-25 h-9 ml-50 mr-10 dark:img " />
-        <ul class="flex justify-between gap-x-5 text-[#1E1E1E] dark:text-[#ffffffeb] font-segoe font-normal text-lg  ml-80 mr-50 h-15 items-center">
-            {links.map(link => (
-            <li><a href={link.href} class="border-b-2 border-transparent  hover:border-red-400  text-black-800 hover:text-black-500 pb-3">{link.name}</a></li>))}
-        </ul>
-        <button class="flex items-center justify-center h-8 py-1.5 px-5 rounded-sm font-segoe text-sm text-[#F5F5F7] bg-[#5137F0] ml-40">
-            Conocenos
-        </button>
-        <button class=" gap-x-20 pt-10" id="theme-toggle">
-            <Darkmode />
-        </button>
-    </nav>
+
+<div class="min-w-64 h-40 bg-[#fbfbfb] dark:bg-[#282829]">
+  <nav
+    class="flex justify-evenly items-center p-4 dark:bg-[#282829] min-w-64 h-16"
+  >
+    <Logo width="80px" />
+    <ul
+      class="flex justify-between gap-x-10 text-[#1E1E1E] dark:text-[#ffffffeb] font-segoe font-normal text-sm ml-80 mr-50 h-15 items-center"
+    >
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="navbar-item"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <button
+      class="flex items-center justify-center h-8 py-2 px-4 rounded-sm font-segoe text-sm text-[#F5F5F7] bg-[#5137F0] ml-40"
+    >
+      Conocenos
+    </button>
+    <Darkmode />
+  </nav>
 </div>
 
+<style>
+    @reference "tailwindcss";
+    @custom-variant dark (&:where(.dark, .dark *));
+    .navbar-item {
+        @apply inline-block text-center border-b-2 border-transparent text-black pb-3 relative w-[120%];
+        transition: transform .2s;
+    }
+
+    .navbar-item:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-item::after {
+        content: "";
+        @apply absolute w-full h-0.5 bg-[#FF7070] bottom-0 right-0;
+        transform: scaleX(0);
+        transition: transform .2s;
+    }
+
+    .navbar-item:hover::after {
+        transform: scaleX(1);
+    }
+
+
+</style>
