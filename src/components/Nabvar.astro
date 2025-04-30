@@ -5,10 +5,11 @@ const links = [
     {name: 'Servicios', href: '/contact'}, 
 ]
     import Darkmode from './Darkmode.astro';
+import Logo from './Logo.astro';
 ---
 <div class="min-w-64 h-40 bg-[#fbfbfb] dark:bg-[#282829]" >
-    <nav class="flex justify-evenly items-center p-4 dark:bg-[#282829] min-w-64 h-16">
-        <img src="/src/assets/fonts/Logo ligth.png"  alt="logo" class="w-25 h-9 ml-50 mr-10 dark:img " />
+    <nav class="flex justify-evenly items-center p-4 dark:bg-[#282829] min-w-64 h-20 ml-50">
+        <Logo width="99px"></Logo>
         <ul class="flex justify-between gap-x-5 text-[#1E1E1E] dark:text-[#ffffffeb] font-segoe font-normal text-lg  ml-80 mr-50 h-15 items-center">
             {links.map(link => (
             <li><a href={link.href} class="border-b-2 border-transparent  hover:border-red-400  text-black-800 hover:text-black-500 pb-3">{link.name}</a></li>))}
