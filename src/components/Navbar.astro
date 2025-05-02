@@ -1,4 +1,51 @@
 ---
-
+import Logo from './Logo.astro';
+import Darkmode from './Darkmode.astro';
+const links = [
+    {name: 'Inicio', href: '/'},
+    {name: 'Nuestro Equipo', href: '/about'},
+    {name: 'Servicios', href: '/contact'}, 
+]
 ---
+<div class="min-w-64 h-40 bg-[#fbfbfb] dark:bg-[#282829]" >
+    <nav class="flex justify-evenly items-center p-4 dark:bg-[#282829] min-w-64 h-20 ml-1">
+        <Logo width="99px"></Logo>
+        <ul class="flex justify-between gap-x-5 text-[#1E1E1E] dark:text-[#ffffffeb] font-segoe font-normal text-lg  ml-80 mr-50 h-15 items-center">
+            {links.map(link => (
+            <li><a href={link.href}>{link.name}</a></li>))}
+        </ul>
+        <button class="flex items-center justify-center h-8 py-1.5 px-5 rounded-sm font-segoe text-sm text-[#F5F5F7] bg-[#5137F0] ml-40">
+            Conocenos
+        </button>
+        <div class="absolute  transform translate-x-[10px] translate-y-[120px] right-0 top-0 mr-15 mt-2 ">
+            <Darkmode></Darkmode>
+        </div>    
+    </nav>
+</div>
 
+<style>
+    a {
+        transition: all 0.5s ease-in-out;
+        position: relative;
+    }
+    a:hover {
+        color: #FF7070;
+    }
+    a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: #FF7070;
+        transition: all 0.3s ease-in-out;
+        scale: 0;
+        bottom: -15px;
+        
+    }
+    a:hover::after {
+        width: 100%;
+        scale: 1;
+    }
+
+</style>
