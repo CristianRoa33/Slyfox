@@ -2,15 +2,71 @@
 
 ---
     <button id="themeToggle" >
-        <img id=themeIcon src="/src/icons/sun.svg" alt="icon sun" width="40"/>
+        <span id=themeIcon>
+            <img  id="sunIcon" src="/src/assets/images/Mask.png" alt="icon sun"/>
+            <img id="moonIcon" src="/src/assets/images/moon.webp" alt="icon moon"/>
+        </span>
     </button>
+    
     <style>
     #themeToggle {
-    border: 0;
-    background: transparent;
+    width: 64px;
+    height: 31px;
+    background-color: #E8E7E7;
+    border: 1px solid #E8E7E7;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    #themeToggle:hover {
+        background-color: rgba(217, 217, 217, 0.10);
+    }
+    #themeIcon {
+        position: relative;
+        width: 28px;
+        height: 28px
     }
     
+    #themeIcon img {
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1px 2px;
+        border-radius: 50%;
+        transition: opacity 0.3s ease;
+        transform: translate(-60%, 0%);
+    }
+
+    #moonIcon {
+        opacity: 0;
+        background-color: #231f20;
+        outline: 1px dashed #ff7070;
+        outline-offset: 8px;
+    }
+
+    #sunIcon {
+        opacity: 1;
+        background-color: #979797;
+        outline: 1px dashed #ff7070;
+        outline-offset: 8px;
+    }
+
+    #themeIcon:hover #sunIcon {
+        content: "";
+        opacity: 0;
+    }
+
+    #themeIcon:hover #moonIcon {
+        content: "";
+        opacity: 1;
+    }
+
     </style>
 
 <script is:inline>
@@ -21,15 +77,16 @@
     })();
     
     document.documentElement.classList.toggle("dark", theme === "dark");
-    themeIcon.src = theme === "dark" ? "/src/icons/moon.svg" : "/src/icons/sun.svg";
+    themeIcon.src = theme === "dark" ? "/src/assets/images/moon.webp" : "/src/assets/images/sun.webp";
 
     const handleToggleClick = () => {
         const element = document.documentElement;
         element.classList.toggle("dark");
     
     const isDark= element.classList.contains("dark");
-    themeIcon.src = isDark ? "/src/icons/moon.svg" : "/src/icons/sun.svg";
+    themeIcon.src = isDark ? "/src/assets/images/moon.webp" : "/src/assets/images/sun.webp";
     
     }
     document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
+    
 </script>
