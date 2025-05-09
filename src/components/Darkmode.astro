@@ -15,7 +15,6 @@
     background-color: #E8E7E7;
     border-radius: 15px;
     display: flex;
-    justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
     }
@@ -26,7 +25,8 @@
         position: relative;
         width: 28px;
         height: 28px
-        trasform: translatex(0%);
+        transform: translate(0%);
+        transition: transform 0.3s ease;
     }
     
     #themeIcon img {
@@ -40,6 +40,10 @@
         border-radius: 50%;
         transition: opacity 0.3s ease;
         transform: translate(-50%, -50%);
+    }
+
+    #themeToggle:hover #themeIcon {
+        transform: translate(100%);
     }
 
     #moonIcon {
