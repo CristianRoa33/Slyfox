@@ -7,10 +7,10 @@ const links = [
     {name: 'Servicios', href: '/contact'}, 
 ]
 ---
-<div class="min-w-64 h-40 bg-[#fbfbfb] dark:bg-[#282829]" >
+<div class="min-w-64 h-40 bg-[#fbfbfb] dark:bg-[#282829] sm:px-36">
     <nav class="flex justify-evenly items-center p-4 dark:bg-[#282829] min-w-64 h-20 ml-1">
         <Logo width="99px"></Logo>
-        <ul class="flex justify-between gap-x-5 text-[#1E1E1E] dark:text-[#ffffffeb] font-segoe font-normal text-lg  ml-80 mr-50 h-15 items-center">
+        <ul class="flex justify-between gap-x-5 text-[#1E1E1E] dark:text-[#ffffffeb] font-segoe font-normal text-lg  ml-80 mr-50 h-15 items-center md:flex-row">
             {links.map(link => (
             <li><a href={link.href}>{link.name}</a></li>))}
         </ul>

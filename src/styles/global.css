@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@plugin "@midudev/tailwind-animations";
 
 @font-face {
     font-family: 'Satoshi';

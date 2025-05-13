@@ -1,15 +1,15 @@
 ---
 
 ---
-    <button id="themeToggle" >
-        <span id=themeIcon>
-            <img  id="sunIcon" src="/src/assets/images/Mask.png" alt="icon sun"/>
-            <img id="moonIcon" src="/src/assets/images/moon.webp" alt="icon moon"/>
+    <button id="themeToggle" class="flex flex-row relative w-16 h-8 bg-[#E8E7E7] rounded-[15px] cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[ dark:bg-[#141414] dark:hover:bg-[#2C2C2C]">
+        <span id=themeIcon class="relative w-7 h-7 translate-x-0  top-1/1transition-transform duration-300 ease-in-out ">
+            <img  id="sunIcon" src="/src/assets/images/Mask.png" alt="icon sun" class="flex absolute top-4 left-1 w-full h-full p-[1px] rounded-full transition-opacity duration-300 transform-translate-x-1/2 -translate-y-1/2 opacity-100 bg-[#979797]"/>
+            <img id="moonIcon" src="/src/assets/images/moon.webp" alt="icon moon" class="flex absolute top-4 left-3/2 w-full h-full p-[1px] rounded-full transition-opacity duration-300 transform -translate-x-1/2 -translate-y-1/2 opacity-0 bg-[#231f20]"/>
         </span>
     </button>
     
     <style>
-    #themeToggle {
+    /* #themeToggle {
     width: 64px;
     height: 31px;
     background-color: #E8E7E7;
@@ -17,8 +17,8 @@
     display: flex;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    }
-    #themeToggle:hover {
+    }  */
+    /* #themeToggle:hover {
         background-color: rgba(217, 217, 217, 0.10);
     }
     #themeIcon {
@@ -44,22 +44,24 @@
 
     #themeToggle:hover #themeIcon {
         transform: translate(100%);
-    }
-
+    } */
+    
     #moonIcon {
         opacity: 0;
         background-color: #231f20;
-        outline: 1px dashed #ff7070;
-        outline-offset: 8px;
+        outline: 2px dashed #FF7070;
+        outline-offset: 10px;
+        animation: rotar 1s linear infinite; 
     }
 
     #sunIcon {
         opacity: 1;
         background-color: #979797;
-        outline: 1px dashed #ff7070;
-        outline-offset: 8px;
+        outline: 2px dashed #FF7070;
+        outline-offset: 10px;
+        animation: girar 10s linear infinite;
     }
-
+    
     #themeIcon:hover #sunIcon {
         content: "";
         opacity: 0;
@@ -68,8 +70,18 @@
     #themeToggle:hover #moonIcon {
         content: "";
         opacity: 1;
-    }
+    } 
 
+    @keyframes girar {
+        from {transform: rotate(0deg);}
+        to{ transform: rotate(-360deg);}
+    } 
+
+    @keyframes rotar {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+    }
     </style>
 
 <script is:inline>
