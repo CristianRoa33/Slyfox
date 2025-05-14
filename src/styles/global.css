@@ -2,6 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @plugin "@midudev/tailwind-animations";
 
+
 @font-face {
     font-family: 'Satoshi';
     src: url('/src/assets/fonts/Satoshi-Regular.otf') format('opentype');
@@ -55,3 +56,4 @@
     --font-satoshi: "Satoshi", "sans-serif";
     --font-segoe: "Segoe UI", "sans-serif"
 }
+

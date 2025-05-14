@@ -11,13 +11,13 @@ const {width} = Astro.props;
 
 <div style={"width: " + width}>
     <Image 
-        class="dark:hidden"
+        class="dark:hidden inline w-[61px] md:w-[61px] lg:w-[180px]"
         src={LogoLight} 
         alt="Logo de la empresa Slyfox" 
     />
 
     <Image 
-        class="hidden dark:inline w-[51px] sm:w-[71px] lg:w-[180px]"
+        class="hidden dark:inline w-[61px] md:w-[61px] lg:w-[180px]"
         src={LogoDark} 
         alt="Una descripción de mi imagen."
     />

@@ -2,13 +2,13 @@
 import Select from "./Select.astro";
 ---
 
-<div class="flex items-center justify-center gap-x-16 bg-[#F5F6FA] dark:bg-[#141414] py-4">
-    <span class="text-[#31313D] dark:text-white font-segoe font-normal">
+<div class=" hidden md:flex md:items-center md:justify-center md:gap-x-10 lg:flex lg:items-center lg:justify-center lg:gap-x-16 bg-[#F5F6FA] dark:bg-[#141414] lg:py-4">
+    <span class=" md:font-segoe md:font-normal md:text-xs text-[#31313D] dark:text-white lg:font-segoe lg:font-normal lg:text-base">
         Elige otro idioma para ver el contenido en tu idioma preferido.
     </span>
-    <div class="flex items-center gap-10">
+    <div class=" md:flex md:items-center md:gap-8 lg:flex lg:items-center lg:gap-10">
         <Select />
-        <button class="flex items-center justify-center h-8 py-1.5 px-5 rounded-sm font-segoe text-sm text-[#F5F5F7] bg-[#FF7070]">
+        <button class="md:flex md:items-center md:justify-center md-h-1 md:py-0.5 md:px-2 md:rounded-sm md:text-xs  md:text-[#F5F5F7] md:bg-[#FF7070] lg:flex lg:items-center lg:justify-center lg:h-8 lg:py-1.5 lg:px-5 lg:rounded-sm lg:font-segoe lg:text-sm lg:text-[#F5F5F7] lg:bg-[#FF7070]">
             Continuar
         </button>
     </div>
