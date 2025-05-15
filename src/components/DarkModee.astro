@@ -1,0 +1,62 @@
+---
+import SunIcon from "@images/sun.webp";
+import MoonIcon from "@images/moon.webp";
+import Image from "astro/components/Image.astro";
+---
+
+<button id="themeToggle" class="bg-[#E8E7E7] dark:bg-[#231F20] w-12 lg:w-20 h-6 lg:h-10 px-[3px] lg:px-[5px] rounded-full cursor-pointer relative">
+  <span
+    class="dark_mode-icon_container block w-[20px] lg:w-[30px] 
+    after:border-[#FF7070] dark:after:border-white after:animate-rotate
+    h-[20px] lg:h-[30px] rounded-full
+    relative bg-[#979797] dark:bg-[#d9d9d91a]
+    dark:lg:translate-x-[40px]" 
+  >
+    <Image
+      class="dark_mode-icon opacity-100 dark:opacity-0"
+      src={SunIcon}
+      alt="icono que indica que el modo claro esta activo"
+    />
+    <Image
+      class="dark_mode-icon opacity-0 dark:opacity-100"
+      src={MoonIcon}
+      alt="icono que indica que el modo oscuro esta activo"
+    />
+  </span>
+</button>
+
+<style>
+  @reference "tailwindcss";
+  @custom-variant dark (&:where(.dark, .dark *));
+
+  .dark_mode-icon_container::after {
+    content: "";
+    @apply 
+        absolute top-1/2 left-1/2 
+        translate-[-50%] rounded-full
+        border border-dashed
+        w-[40px] lg:w-[65px]
+        h-[40px] lg:h-[65px];
+  }
+
+  .dark_mode-icon {
+    @apply absolute top-1/2 left-1/2 translate-[-50%] w-[17px] lg:w-[25px];
+  }
+</style>
+
+<script is:inline>
+
+    const theme = (()=>{
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    })();
+    
+    document.documentElement.classList.toggle("dark", theme === "dark");
+
+    const handleToggleClick = () => {
+        const element = document.documentElement;
+        element.classList.toggle("dark");
+    
+    }
+    document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
+    
+</script>

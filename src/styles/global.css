@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-@plugin "@midudev/tailwind-animations";
 
+* {
+    transition: all .3s;
+}
 
 @font-face {
     font-family: 'Satoshi';
@@ -54,6 +56,15 @@
 
 @theme {
     --font-satoshi: "Satoshi", "sans-serif";
-    --font-segoe: "Segoe UI", "sans-serif"
+    --font-segoe: "Segoe UI", "sans-serif";
+    --animate-rotate: rotate 6s linear infinite;
+
+    @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+    }
 }
+
+
 
