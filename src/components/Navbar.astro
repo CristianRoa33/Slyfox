@@ -1,7 +1,7 @@
 ---
 import Logo from './Logo.astro';
-import Darkmode from './Darkmode.astro';
-import DarkModee from './DarkModee.astro';
+import DarkMode from  '@components/DarkMode.astro'
+
 const links = [
     {name: 'Inicio', href: '/'},
     {name: 'Nuestro Equipo', href: '/about'},
@@ -19,7 +19,7 @@ const links = [
             <p class=" md:p-2">Conocenos</p>
         </button>
         <div class="absolute transform translate-x-[1px] translate-y-[12px] right-3 top-0 mr-15 mt-2">
-            <DarkModee></DarkModee>
+            <DarkMode></DarkMode>
         </div>
         <button id="menuButton" class=" flex w-10 h-10 space-y-2 p-2 font-bold  text-[#1E1E1E] dark:text-[#ffffffeb] bg-[#fbfbfb] dark:bg-[#282829] md:hidden lg:hidden  ">
             ☰

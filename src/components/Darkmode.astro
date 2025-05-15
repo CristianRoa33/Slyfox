@@ -1,105 +1,60 @@
 ---
-
+import SunIcon from "@images/sun.webp";
+import MoonIcon from "@images/moon.webp";
+import Image from "astro/components/Image.astro";
 ---
-    <button id="themeToggle" class=" w-10 h-5 transform-translate-x-1/3 translate-y--1 flex flex-row relative bg-[#E8E7E7] rounded-[15px] cursor-pointer transition-colors ease-in-out hover:bg-[ dark:bg-[#141414] dark:hover:bg-[#2C2C2C] md:w-10 md:h-4 md:translate-x-8 md:translate-y-12 lg:-translate-x-9/12 lg:translate-y-24 lg:w-15 lg:h-7">
-        <span id=themeIcon class="w-4  relative md:w-4.5 md:h-4.5 translate-x-0 translate-y-0.2  top-1/1transition-transform ease-in-out lg:w-7 lg:h-7">
-            <!-- <div  id="Rotate"   class="absolute -translate-x-0.30 -translate-y-0/10 duration-1000 inset-0 opacity-100 outline-2 outline-[#FF7070] outline-dashed  rounded-full outline-offset-10 animate-rotate-360 animate animate-delay-400 animate-iteration-count-infinite "></div> -->
-            <img  id="sunIcon" src="/src/assets/images/Mask.png" alt="icon sun" class=" w-5 h5 top-2.5  p-[3px] rounded-full transition-opacity duration-1000 transform-translate-x-3 -translate-y-2 opacity-100 hover:opacity-0 bg-[#979797] animate-bezier-back-in animate-spin-counter-clockwise animate-delay-400 animate-iteration-count-infinite md:flex absolute md:top-4 left-1 md:w-full md:h-full transform md:-translate-x-1/16 md:-translate-y-9/10 lg:-translate-x-0.5 lg:-translate-y-4" />
 
-            <!-- <div class="absolute  duration-slow top-4 left-3/2 -translate-x-1/2 -translate-y-1/2 inset-0 outline-2 outline-[#FF7070] outline-dashed  rounded-full outline-offset-6 animate-rotate-360 animate animate-delay-1000 animate-iteration-count-infinite"></div> -->
-            <img id="moonIcon" src="/src/assets/images/moon.webp" alt="icon moon" class="w-5 h-4 top-2.5 left-7 p-[1px] transition-opacity rounded-full duration-1000 transform -translate-x-1 -translate-y-2 opacity-0 bg-[#231f20] hover:opacity-100 animate-bezier-back-in animate-rotate-in animate-iteration-count-infinite animate-delay-1000 md:flex absolute md:top-4 md:left-12 md:w-full md:h-full md:-translate-x-7 md:-translate-y-9/10 lg:-translate-x-4 lg:-translate-y-4 "/>
+<button id="themeToggle" class="bg-[#E8E7E7] dark:bg-[#231F20] w-12 lg:w-20 h-6 lg:h-10 px-[3px] lg:px-[5px] rounded-full cursor-pointer relative">
+  <span
+    class="dark_mode-icon_container block w-[20px] lg:w-[30px] 
+    after:border-[#FF7070] dark:after:border-white after:animate-rotate
+    h-[20px] lg:h-[30px] rounded-full
+    relative bg-[#979797] dark:bg-[#d9d9d91a]
+    dark:translate-x-[22px] dark:lg:translate-x-[40px]" 
+  >
+    <Image
+      class="dark_mode-icon opacity-100 dark:opacity-0"
+      src={SunIcon}
+      alt="icono que indica que el modo claro esta activo"
+    />
+    <Image
+      class="dark_mode-icon opacity-0 dark:opacity-100"
+      src={MoonIcon}
+      alt="icono que indica que el modo oscuro esta activo"
+    />
+  </span>
+</button>
 
-        </span>
-    </button>
-    
-    <style>
-    /* #themeToggle {
-    width: 64px;
-    height: 31px;
-    background-color: #E8E7E7;
-    border-radius: 15px;
-    display: flex;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    }   */
-    /* #themeToggle:hover {
-        background-color: rgba(217, 217, 217, 0.10);
-    } */
-    /* #themeIcon {
-        position: relative;
-        width: 28px;
-        height: 28px
-        transform: translate(0%);
-        transition: transform 0.3s ease;
-    }  */
-    
-    /* #themeIcon img {
-        position: absolute;
-        display: flex;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        padding: 1px 2px;
-        border-radius: 50%;
-        transition: opacity 0.3s ease;
-        transform: translate(-50%, -50%);
-    } */
+<style>
+  @reference "tailwindcss";
+  @custom-variant dark (&:where(.dark, .dark *));
 
-    /* #themeToggle:hover #themeIcon {
-        transform: translate(100%);
-    } */ 
-    
-    /* #moonIcon {
-        opacity: 0;
-        background-color: #231f20;
-        animation: girar 10s linear infinite; 
-    } */
+  .dark_mode-icon_container::after {
+    content: "";
+    @apply 
+        absolute top-1/2 left-1/2 
+        translate-[-50%] rounded-full
+        border border-dashed
+        w-[40px] lg:w-[65px]
+        h-[40px] lg:h-[65px];
+  }
 
-    /* #sunIcon {
-        opacity: 1;
-        background-color: #979797;
-        animation: girar 10s linear infinite;
-    }  */
-    
-    /* #themeIcon:hover #sunIcon {
-        content: "";
-        opacity: 0;
-    } */
-/* 
-    #themeToggle:hover #moonIcon {
-        content: "";
-        opacity: 1;
-    }   */
-
-    /* @keyframes girar {
-        from {transform: rotate(0deg);}
-        to{ transform: rotate(360deg);}
-    }  */
-
-    /* @keyframes rotar {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(15deg); }
-    100% { transform: rotate(0deg); }
-    } */
-    </style>
+  .dark_mode-icon {
+    @apply absolute top-1/2 left-1/2 translate-[-50%] w-[17px] lg:w-[25px];
+  }
+</style>
 
 <script is:inline>
-    const themeIcon = document.getElementById("themeIcon");
 
     const theme = (()=>{
         return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     })();
     
     document.documentElement.classList.toggle("dark", theme === "dark");
-    themeIcon.src = theme === "dark" ? "/src/assets/images/moon.webp" : "/src/assets/images/sun.webp";
 
     const handleToggleClick = () => {
         const element = document.documentElement;
         element.classList.toggle("dark");
-    
-    const isDark= element.classList.contains("dark");
-    themeIcon.src = isDark ? "/src/assets/images/moon.webp" : "/src/assets/images/sun.webp";
     
     }
     document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
