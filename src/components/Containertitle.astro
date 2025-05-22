@@ -1,29 +1,47 @@
 ---
+import Image from "astro/components/Image.astro";
+import Customer1 from "@images/customer1.webp";
+import Customer2 from "@images/customer2.webp";
+import Customer3 from "@images/customer3.webp";
+import Customer4 from "@images/customer4.webp";
+import Customer5 from "@images/customer5.webp";
+import Star from "@images/Star.png";
+
 
 ---
-
-<section class=" flex flex-col items-center gap-20 self-stretch bg-[#fbfbfb] dark:bg-[#282829] h-110">
-    <div>
-    <h2 class=" text-6xl font-bold font-satoshi text-center mt-30 h-25 text-[#1E1E1E] dark:text-[#ffffffeb] ">Lo hacemos por Ti</h2>
-    </div>
-    <div class="flex justify-center font-satoshi bg-[#fbfbfb] dark:bg-[#282829] items-center gap-x-01 ml-0">
-        <div class="flex gap-0.01 mt-0 mr-6">
-            <img src="/src/assets/images/customer1.png" alt="cliente 1" class="translate-x-10">
-            <img src="/src/assets/images/customer2.png" alt="cliente 2" class="translate-x-8">
-            <img src="/src/assets/images/customer3.png" alt="cliente 3"class="translate-x-6">
-            <img src="/src/assets/images/customer4.png" alt="cliente 4" class="translate-x-4">
-            <img src="/src/assets/images/customer5.png" alt="cliente 5" class="translate-x-2">
+<section class="flex flex-col items-center gap-0.5 self-stretch bg-[#fbfbfb] dark:bg-[#282829] h-80 sm:h-110 md:h-110 lg:h-90">
+    <h2 class="text-[20px] font-bold font-satoshi pt-5 mt-1 text-center text-[#1E1E1E] dark:text-[#ffffffeb] sm:mt-10 md:text-4xl md:text-center md:mt-20  lg:text-6xl lg:mt-30">Lo hacemos por Ti</h2>
+    <div class=" flex justify-center items-center gap-x-6 mt-0 lg:mt-10">
+        <div class="flex gap-x-0.5 mt-4 ml-2 sm:mt-8">
+        <Image src={Customer1} alt="customer1" class="translate-x-12"/> 
+        <Image src={Customer2} alt="customer2" class="translate-x-8"/>
+        <Image src={Customer3} alt="customer3" class="translate-x-5"/>
+        <Image src={Customer4} alt="customer4" class="translate-x-3"/>
+        <Image src={Customer5} alt="customer5" class="translate-x-1"/>
         </div>
-        <div class="flex flex-col items-center justify-center">
-            <div class="flex gap-x-2 mr-12">
-                <img src="/src/assets/images/SVG.png" alt="star1" class="w-5 h-5">
-                <img src="/src/assets/images/SVG.png" alt="star2" class="w-5 h-5">
-                <img src="/src/assets/images/SVG.png" alt="star3" class="w-5 h-5">
-                <img src="/src/assets/images/SVG.png" alt="star4" class="w-5 h-5">
-                <img src="/src/assets/images/SVG.png" alt="star5" class="w-5 h-5">
+        <div class="flex flex-col items-center justify-center mt-0 lg:mt-1">
+            <div class="flex gap-x-0.5 mt-4 mr-20 ml-2 sm:mr-28 sm:mt-8 md:ml-2 ">
+            <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
+            <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
+            <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
+            <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
+            <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
             </div>
-            <p class=" font-satoshi font-thin text-center text-[20px] text-[#1E1E1E] dark:text-[#ffffffeb] mt-1 animate-slide-up-fade animate-delay-500 ">Clientes de Confianza</p>
+            <p id="slide" class=" font-satoshi text-center text-[12px] text-[#1E1E1E] dark:text-[#ffffffeb] mt-0 mr-12 sm:text-base md:text-sm md:mr-16 lg:text-[15px] ">Clientes de Confianza</p>
         </div>
-    </div>
 </section>
 
+<style>
+    #slide {
+        animation: slide 1s ease-in-out  both;
+    }
+
+    @keyframes slide {
+    from {
+        transform: translatey(100%);
+    } to {
+        transform: translatey(0);
+    }
+    }
+
+</style>
