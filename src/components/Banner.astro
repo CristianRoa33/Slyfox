@@ -1,5 +1,32 @@
 ---
+const imagenes = [
+    { src:"/src/assets/images/image170.png" },
+    { src:"/src/assets/images/image171.png" },
+    { src:"/src/assets/images/image172.png" },
+    { src:"/src/assets/images/image169.png" },
+    { src:"/src/assets/images/image173.png" },
+    { src:"/src/assets/images/image174.png" },
 
+]
 
 ---
-
+<section class="w-full h-full bg-[#fbfbfb] dark:bg-[#282829] ">
+    <div>
+        <div class="grid grid-cols-6 pl-5 pr-5 w-[100%]  bg-[#fbfbfb] dark:bg-[#282829] gap-x-2 xl:pl-35 xl:pr-20 xl:gap-2 xl:w-full">
+        {imagenes.map((imagen, index)=>(
+            <img src={imagen.src} alt={`imagen ${index + 1}`}/>))}
+        </div>
+    </div>
+    <div class="md:flex md:mt-6 xl:mt-20 ">
+        <div class="hidden md:flex items-center justify-center w-full h-full ml-5 bg-[#fbfbfb] dark:bg-[#282829] xl:ml-80">
+            <p class="text-center text-[16px] text-[#31323D] dark:text-[#F5F5F7] font-bold font-satoshi md:mt-8 md:p-2 md:ml-15 xl:text-[32px]  xl:ml-20 xl:p-8">Nuestros clientes son nuestra mejor carta de presentación. Más que un servicio, ofrecemos soluciones tecnológicas que se adaptan a cada necesidad. Confiamos en la calidad, la innovación y el compromiso para hacer crecer tu negocio con software a la medida.</p>
+        </div>
+        <div class="grid grid-cols-2 w-full h-full md:flex md:flex-col" >
+        <h2 class="text-[#FF7070] text-[30px] mt-10 ml-12 font-bold font-satoshi sm:ml-25 sm:text-[60px] md:text-[25px] md:ml-10 xl:mt-15 xl:ml-17 xl:text-[50px]">+50</h2>
+        <p class="hidden sm:hidden md:flex md:text-[#36455D] md:dark:text-[#F5F5F7] md:text-[14px] md:font-bold md:font-satoshi md:mt-1 md:ml-10 xl:ml-17 xl:mt-8 xl:text-[18px]">Empresas confían en nosotros</p>
+        <h2 class="text-[#FF7070] text-[30px] mt-10 ml-8 font-bold font-satoshi sm:ml-15 sm:text-[60px] md:text-[25px] md:ml-10 xl:ml-17 xl:text-[50px]">+100</h2>
+        <p class="text-[#36455D] dark:text-[#F5F5F7] text-[14px] ml-8 font-bold font-satoshi mt-3 sm:ml-10 md:hidden">Empresas confían en nosotros</p>
+        <p class="text-[#36455D] dark:text-[#F5F5F7] text-[14px] mr-8 font-bold font-satoshi mt-3 sm:ml-18 xl:text-[18px]">Proyectos Entregados</p>
+        </div>
+    </div>
+</section>    

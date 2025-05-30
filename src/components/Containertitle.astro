@@ -5,58 +5,89 @@ import Customer2 from "@images/customer2.webp";
 import Customer3 from "@images/customer3.webp";
 import Customer4 from "@images/customer4.webp";
 import Customer5 from "@images/customer5.webp";
-import Star from "@images/Star.png";
-import Banner1 from "@images/image130.png"
-import Banner2 from "@images/image132.png"
-import Banner3 from "@images/image133.png"  
-import Banner4 from "@images/image134.png"
-import Banner5 from "@images/image135.png"
-import Banner6 from "@images/image136.png"
-
+import Star from "../assets/images/Star.png";
 ---
-<section class="flex flex-col items-center gap-0.5 self-stretch bg-[#fbfbfb] dark:bg-[#282829] h-40 sm:h-50 md:h-60 lg:h-110">
-    <h2 class="text-[20px] font-bold font-satoshi pt-5 mt-1 text-center text-[#1E1E1E] dark:text-[#ffffffeb] sm:mt-10 md:text-4xl md:text-center md:mt-20  lg:text-6xl lg:mt-30">Lo hacemos por Ti</h2>
-    <div class=" flex justify-center items-center gap-x-6 mt-0 lg:mt-10">
-        <div class="flex gap-x-0.5 mt-4 ml-2 sm:mt-8">
-            <Image src={Customer1} alt="customer1" class="translate-x-12"/> 
-            <Image src={Customer2} alt="customer2" class="translate-x-8"/>
-            <Image src={Customer3} alt="customer3" class="translate-x-5"/>
-            <Image src={Customer4} alt="customer4" class="translate-x-3"/>
-            <Image src={Customer5} alt="customer5" class="translate-x-1"/>
-        </div>
-        <div class="flex flex-col items-center justify-center mt-0 lg:mt-1">
-            <div class="flex gap-x-0.5 mt-4 mr-20 ml-2 sm:mr-28 sm:mt-8 md:ml-2 ">
-                <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
-                <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
-                <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
-                <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
-                <Image src={Star} alt="star" class="w-5 h-5 mt-1"/>
-            </div>
-            <p id="slide" class=" font-satoshi text-center text-[12px] text-[#1E1E1E] dark:text-[#ffffffeb] mt-0 mr-12 sm:text-base md:text-sm md:mr-16 lg:text-[15px] ">Clientes de Confianza</p>
-        </div>
-</section>
-<section class="flex items-center bg-[#fbfbfb] dark:bg-[#282829]">
-        <div class="grid ml-10 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 lg:ml-20 lg:mr-20">
-            <Image src={Banner1} alt="banner1" class="w-50 h-80 sm:w-80 sm:h-70 md:w-80 md:h-80 md:mr-2 lg:w-100 lg:h-120"/>
-            <Image src={Banner2} alt="banner1" class="w-50 h-80 sm:w-80 sm:h-70 md:w-80 md:h-80 md:mr-4 lg:w-100 lg:h-100"/>
-            <Image src={Banner3} alt="banner1" class="hidden sm:block sm:h-70 sm:mr-20 md:w-80 md:h-80 md:mr-5 lg:w-100 lg:h-120"/>
-            <Image src={Banner4} alt="banner1" class="hidden sm: sm:h-70 md:w-80 md:h-80 md:mr-3 lg:block lg:w-100 lg:h-120"/>
-            <Image src={Banner5} alt="banner1" class="hidden sm: md:w-50 md:h-80 lg:block lg:w-100 lg:h-120"/>
-            <Image src={Banner6} alt="banner1" class="hidden sm:md:w-50 md:h-80 lg:block lg:w-100 lg:h-120 "/>
-        </div>
-</section>
 
+<section class="flex flex-col items-center gap-0.5 self-stretch bg-[#fbfbfb] dark:bg-[#282829] h-40 sm:h-50 md:h-60 lg:h-120">
+    <h2 class="text-[20px] font-bold font-satoshi pt-5 mt-8 text-center text-[#1E1E1E] dark:text-[#ffffffeb] sm:mt-10 md:text-4xl md:text-center md:mt-20  lg:text-6xl lg:mt-30">Lo hacemos por Ti</h2>
+    <div class=" flex justify-center items-center gap-x-6 mt-0 lg:mt-10">
+        <div class="flex gap-x-0.5  mt-4 sm:mt-8 sm:ml-20">
+            <Image src={Customer1} alt="customer1" id="customer1" class="translate-x-12 w-7 h-7 xl:w-11 xl:h-11"/> 
+            <Image src={Customer2} alt="customer2" id="customer2" class="translate-x-8 w-7 h-7 xl:w-11 xl:h-11"/>
+            <Image src={Customer3} alt="customer3" id="customer3" class="translate-x-5 w-7 h-7 xl:w-11 xl:h-11"/>
+            <Image src={Customer4} alt="customer4" id="customer4" class="translate-x-3 w-7 h-7 xl:w-11 xl:h-11"/>
+            <Image src={Customer5} alt="customer5" id="customer5" class="translate-x-1 w-7 h-7 xl:w-11 xl:h-11"/>
+        </div> 
+        <div class="flex flex-col items-center justify-center mt-0 mr-6 lg:mt-1 ">
+            <div id="stars" class="flex gap-x-0.5 mt-4 mr-26 ml-2 sm:mr-31 sm:mt-8 md:ml-2 ">
+                <Image src={Star} alt="star1" id="star1"class="w-3 h-3 mt-1 xl:w-5 xl:h-5"/>
+                <Image src={Star} alt="star2" id="star2"class="w-3 h-3 mt-1 xl:w-5 xl:h-5"/>
+                <Image src={Star} alt="star3" id="star3"class="w-3 h-3 mt-1 xl:w-5 xl:h-5"/>
+                <Image src={Star} alt="star4" id="star4"class="w-3 h-3 mt-1 xl:w-5 xl:h-5"/>
+                <Image src={Star} alt="star5" id="star5"class="w-3 h-3 mt-1 xl:w-5 xl:h-5"/>
+            </div>
+            <p id="slide" class=" font-satoshi text-center text-[12px] text-[#1E1E1E] dark:text-[#ffffffeb] mt-0 mr-10 sm:text-base md:text-sm md:mr-16 lg:text-[15px] ">Clientes de Confianza</p>
+        </div>
+</section>
 <style>
     #slide {
-        animation: slide 1s ease-in-out  both;
+        animation: slide-up 1.8s cubic-bezier(.25,.46,.45,.94)  both;
     }
 
-    @keyframes slide {
+    @keyframes slide-up {
     from {
-        transform: translatey(100%);
+        transform: translatey(200px);
     } to {
         transform: translatey(0);
     }
     }
-
+    
+    @keyframes slideIn {
+    0% {
+    transform: translateX(200px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+    }
+    #customer1 {
+    animation: slideIn 1s ease-out forwards;
+    }
+    #customer2 {
+    animation: slideIn 1.2s ease-out forwards;
+    }
+    #customer3 {
+    animation: slideIn 1.4s ease-out forwards;
+    }
+    #customer4 {
+    animation: slideIn 1.6s ease-out forwards;
+    }
+    #customer5 {
+    animation: slideIn 1.8s ease-out forwards;
+    }
+    
+    #star1 {
+        animation:pulsate-bck 10s ease-in-out both ;
+    }
+    #star2 {
+        animation:pulsate-bck 8s ease-in-out both ;
+    }
+    #star3 {
+        animation:pulsate-bck 6s ease-in-out both ;
+    }
+    #star4 {
+        animation:pulsate-bck 4s ease-in-out both ;
+    }
+    #star5 {
+        animation:pulsate-bck 2s ease-in-out both ;
+    }
+    
+    @keyframes pulsate-bck {
+        0%{opacity:0;} 
+        50%{opacity:1;}
+        100%{opacity:2;}
+    }
 </style>
+
