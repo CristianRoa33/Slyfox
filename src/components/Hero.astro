@@ -28,7 +28,7 @@ import Logo from "./Logo.astro";
 </div>
 
 <style>
-  .title-dot {
+  .title-dot.animate {
     animation: enterdot 1s cubic-bezier(0, 0.9, 0.12, -0.06) both;
   }
 
@@ -68,3 +68,25 @@ import Logo from "./Logo.astro";
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const titleDot = document.querySelector('.title-dot');
+    
+    if (titleDot) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // Opcional: desconectar después de animar
+          }
+        });
+      }, {
+        threshold: 0.1, // El elemento debe estar al menos 10% visible
+        rootMargin: '0px 0px -50px 0px' // Opcional: ajustar el margen
+      });
+
+      observer.observe(titleDot);
+    }
+  });
+</script>
