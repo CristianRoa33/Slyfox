@@ -130,12 +130,13 @@ const imagenStar= Array.from({length:5})
         const starsContainer = document.getElementById('stars');
         const starElements= Array.from ({length:5}, (_,index) => 
             document.getElementById(`star${index + 1}`)
-        );
+        ).filter((star): star is HTMLElement => star !== null);
+
         const observer = new IntersectionObserver ((entries)=> {
             entries.forEach((entry )=> {
                 if(entry.isIntersecting){
                     starElements.forEach((star,index)=> {
-                    star.style.animacion='none';
+                    star.style.animation='none';
                     void star.offsetWidth; // Forzar reflujo para reiniciar la animación
                     const durations = [10, 8, 6, 4, 2];
                     star.style.animation = `pulsate-bck ${durations[index]}s ease-in-out both`;
@@ -156,4 +157,5 @@ const imagenStar= Array.from({length:5})
 
 
 
+    
 </script>
