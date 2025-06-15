@@ -1,0 +1,60 @@
+---
+const tarjetas = [
+    {   
+        imagen: "/src/assets/images/filecode01.webp",
+        titulo:"Software a la medida",
+        descripcion: " Desarrollo de software personalizado para satisfacer las necesidades únicas de su negocio. desde aplicaciones web hasta soluciones móviles, ofrecemos un enfoque integral para impulsar su éxito digital.",
+        items:["Desarrollo Full Stack", "Sistemas Personalizados", "Integraciones con APIs y plataformas"]
+    },
+    {   
+        imagen: "/src/assets/images/dataflow04.webp",
+        titulo:"Soluciones Omnicanal",
+        descripcion: " Unificar todos tus canales de atención y venta en una sola plataforma. Mejoramos la Experiencia del usuario con herramientas digitales que optimizan la comunicación y automatizan procesos.",
+        items:["CRM y Chatbots", "Plataformas de mensajería y redes sociales", "Sincronización de ventas y servicio al cliente"]
+    },
+    {   
+        imagen: "/src/assets/images/currencydollarcircle.webp",
+        titulo:"Asesoria en Transformación Digital",
+        descripcion: " Te guiamos en el camino hacia la digitación.Optimizamos procesos , mejoramos la experiencia de usuario y te ayudamos a adoptar tecnologías innovadoras para potenciar tu negocio",
+        items:["Consultoria en tecnologia y automatización", "Estrategias de escalabilidad y optimización", "Implementación de mejores prácticas."]
+    },
+    {   
+        imagen: "/src/assets/images/pentool01.webp",
+        titulo:"Diseño UI/UX",
+        descripcion: " Creamos interfaces intuitivas y atractivas que generan impacto.Nos enfocamos en el diseño y la usabilidad para mejorar la interacción de los usuarios con tu plataforma o aplicación.",
+        items:["Prototipado y wireframes", "Diseño de interfaces modernas e intuitivas", "Optimización de la experiencia de usuario (UX)"]
+    },
+    {   
+        imagen: "/src/assets/images/fingerprint-03_2x.webp",
+        titulo:"Seguridad y Protección de Datos",
+        descripcion: " Protege tu información y la de tus clientes con soluciones seguras.Aplicamos medidas avanzadas para garantizar la seguridad en todas tus plataformas.",
+        items:["Auditorías de seguridad y vulnerabilidades", "Cifrado de datos y protección conta ataques", "Cumplimiento de Normativas de Seguridad"]
+    },
+]
+
+---
+
+
+    <div class="bg-[#fbfbfb] dark:bg-[#282829] md:p-10 lg:pt-20">
+        <h2 class="text-[#1E1E1E] dark:text-[#ffffffeb] md:text-[20px] md:ml-5 md:mr-80 lg:text-[30px] lg:ml-50  ">
+            Descubre más de tu compañero perfecto.
+        </h2>
+    </div>
+
+
+
+<div class=" bg-[#fbfbfb] dark:bg-[#282829] grid grid-cols-5 md:grid-cols-5 lg:grid-cols-5 lg:gap-x-2 lg:p-10">
+    {tarjetas.map((tarjeta) => (
+        <div>
+            <div class="bg-[#f5f6f9] dark:bg-[#0D0D0D] md:w-[130px] md:h-[250px]  md:mt-5 md:rounded-lg lg:rounded-lg lg:w-[300px] lg:h-[380px] lg:flex lg:flex-col lg:mt-20 lg:m-5">
+                <img src={tarjeta.imagen} alt={tarjeta.titulo} class="md:w-[80px] md:ml-8 md:pt-20 lg:w-[100px] lg:ml-25 lg:scale-130 lg:mt-10" /></div>
+            <h3 class="text-sm font-bold mb-2 text-[#1E1E1E] dark:text-[#ffffffeb] lg:text-[15px] lg:ml-5">{tarjeta.titulo}</h3>
+            <p class="text-[#1E1E1E] dark:text-[#ffffffeb] lg:text-[15px] lg:p-5 mb-4">{tarjeta.descripcion}</p>
+            <ul class="list-disc pl-5 space-y-2">
+                {tarjeta.items.map((item) => (
+                    <li class="text-[#1E1E1E] dark:text-[#ffffffeb] ">{item}</li>
+                ))}
+            </ul>
+        </div>
+    ))} 
+     
