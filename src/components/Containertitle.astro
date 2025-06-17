@@ -38,7 +38,7 @@ const imagenStar= Array.from({length:5})
         </div>
     <div class="flex flex-col items-center justify-center mt-0 mr-1 lg:mt-1 ">
         <div 
-            id="stars" 
+            id="stars"
             class="flex gap-x-0.5 mt-4 mr-18  sm:mr-31 sm:mt-8 md:ml-2"
         >
             {imagenStar.map((_ , index ) =>(
@@ -125,3 +125,35 @@ const imagenStar= Array.from({length:5})
     }
 </style>
 
+<script>
+    window.addEventListener('DOMContentLoaded', ()=> {
+        const starsContainer = document.getElementById('stars');
+        const starElements= Array.from ({length:5}, (_,index) => 
+            document.getElementById(`star${index + 1}`)
+        );
+        const observer = new IntersectionObserver ((entries)=> {
+            entries.forEach((entry )=> {
+                if(entry.isIntersecting){
+                    starElements.forEach((star,index)=> {
+                    star.style.animacion='none';
+                    void star.offsetWidth; // Forzar reflujo para reiniciar la animación
+                    const durations = [10, 8, 6, 4, 2];
+                    star.style.animation = `pulsate-bck ${durations[index]}s ease-in-out both`;
+                })
+                } else {
+                starElements.forEach((star) => {
+                    star.style.animation = 'none'; 
+                });
+            }
+    })
+} , {
+        threshold: 0.4 // El elemento debe estar al menos 40% visible
+    })
+        if(starsContainer) {
+        observer.observe(starsContainer);
+    }
+    });
+
+
+
+</script>
