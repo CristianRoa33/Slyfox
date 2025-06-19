@@ -1,12 +1,13 @@
 ---
-import Hero from '@components/Hero.astro';
+import Hero from '@components/sections/hero/Hero.astro';
 import Layout from '../layouts/Layout.astro';
-import Containertitle from '@components/Containertitle.astro';
-import Banner from '@components/Banner.astro';
-import Cards_Mobile from '@components/Cards_Mobile.astro';
-import Cards from '@components/Cards.astro';
-import Cards_Servicios from '@components/Cards_Servicios.astro';
-import TeamServices from '@components/Team-services.astro';
+import Containertitle from '@components/sections/containerImage/Container-title.astro';
+import Banner from '@components/sections/containerImage/Banner.astro';
+import Cards_Mobile from '@components/sections/cards/Cards-mobile.astro';
+import Cards from '@components/sections/cards/Cards.astro';
+import Cards_Servicios from '@components/sections/cards/Cards-servicios.astro';
+import TeamServices from '@components/sections/teamServices/Team-services.astro';
+import { tarjetas } from "@components/information-cards.astro"
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -19,6 +20,6 @@ import TeamServices from '@components/Team-services.astro';
     <Banner />
     <Cards_Mobile />
     <Cards/>
-    <Cards_Servicios />
+    <Cards_Servicios tarjetas = {tarjetas}/>
     <TeamServices/>
-</Layout>
+</Layout>   
