@@ -8,6 +8,7 @@ import Cards from '@components/sections/cards/Cards.astro';
 import Cards_Servicios from '@components/sections/cards/Cards-servicios.astro';
 import TeamServices from '@components/sections/teamServices/Team-services.astro';
 import { tarjetas } from "@components/information-cards.astro"
+import Tools from '@components/sections/imagetools/Tools.astro';
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -22,4 +23,5 @@ import { tarjetas } from "@components/information-cards.astro"
     <Cards/>
     <Cards_Servicios tarjetas = {tarjetas}/>
     <TeamServices/>
+    <Tools />
 </Layout>   

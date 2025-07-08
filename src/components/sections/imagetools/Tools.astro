@@ -1,0 +1,67 @@
+---
+import Image from "astro/components/Image.astro";
+import figma from "@images/figma.webp"
+
+import { imagenes } from "@components/images-tools.astro";
+
+const filas = [
+    imagenes.slice(0, 5),
+    imagenes.slice(5, 10),
+    imagenes.slice(10)
+];
+
+---
+
+<section>
+    <div class="flex justify-evenly items-center mt-20 ">
+        <div>
+        <Image
+        src={figma} 
+            alt="" 
+            class="object-contain w-[40px] mt-35 ml-15 mr-15 sm:ml-20 sm:w-[50px] md:w-[60px] md:ml-50 md:mr-30 lg:w-[90px]"
+        />
+        </div>
+        <div class="flex flex-col ml-10 md:mr-20 lg:w-100 xl:w-100 xl:mr-70">
+            <h3 
+            class="text-left text-[#FF7070] text-[15px] mt-15 font-bold font-satoshi sm:text-[25px] md:text-[15px] lg:text-[16px] xl:text-[20px]">
+                Nuestras Herramientas de Punta
+            </h3>
+            <h3 
+            class="text-left text-[15px] text-[#36455D] font-bold font-satoshi sm:text-[25px] md:text-[35px] lg:text-[50px] xl:text-[65px]">
+            Full<br>todoterreno.
+            </h3>
+            <p 
+            class="text-left  text-[10px] font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] pr-5 sm:text-[15px] sm:pr-20 lg:text-[16px]">
+                Construimos soluciones digitales con las tecnologías más avanzadas del mercado. Desde el backend hasta la interfaz de usuario, usamos herramientas que garantizan rendimiento, escalabilidad y seguridad.
+            </p>
+        </div>
+    </div>
+    <div class="space-y-5 sm:mt-15">
+        {filas.map((fila, i) => (
+        <div
+            class={`grid gap-4 m-10 sm:ml-15 lg:ml-30 ${
+            fila.length === 5
+            ? "grid-cols-5"
+            : "grid-cols-3 justify-self-center"
+            }`
+        }
+        >
+            {fila.map((img, j) => (
+                <img
+                    src={img.src}
+                    alt={`img ${i * 5 + j + 1}`}
+                    class="object-contain w-full h-auto max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[90px]"
+                    loading="lazy"
+                />
+            ))}
+        </div>
+    ))}
+    </div>
+    <div>
+        <p class="text-sm font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] m-15 sm:text-base md:text-[13px] md:w-[300px] md:p-10 md:text-star md:ml-100 lg:ml-150 xl:ml-300 xl:text-[18px] xl:w-100">
+            <span class="text-[#FF7070] font-satoshi ">OYE!!!!</span> 
+            <br>
+            La tecnología avanza, y nosotros con ella. Si no lo sabemos, lo aprendemos. Si lo aprendemos, lo perfeccionamos.
+        </p>
+    </div>
+</section>
