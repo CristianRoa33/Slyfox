@@ -32,23 +32,26 @@ const faqs = [
 
 
 ---
-<section class="w-full bg-[#F5F6FA] dark:bg-[#0D0D0D] p-1  ">
-    <div class="bg-[#fbfbfb] rounded-2xl m-8 pb-8">
-        <div class="flex">
+<section class="w-full h-auto bg-[#F5F6FA] dark:bg-[#0D0D0D] p-1 mt-15">
+    <div class="bg-[#fbfbfb] rounded-2xl m-8 pb-8 md:flex md:flex-row-reverse md:items-start md:bg-[#FFFFFF] md:w-[85%] md:ml-15 lg:w-[70%] lg:ml-35 lg:mt-20 
+    xl:w-[50%] xl:ml-120">
+        <div class="flex md:hidden">
             <Image 
                 src={Zorro} 
                 alt="" 
-                class="object-contain max-w-[30px] mt-5 ml-3"
+                class="object-contain max-w-[30px] mt-5 ml-3 sm:ml-7"
             />
             <h1 class="text-[#15242F] text-[15px] font-bold font-satoshi mt-4 ml-4 ">
                 Preguntas? <br>
                 Respuestas.
             </h1>
         </div>
+        <div class="md:flex md:flex-col md:mt-5 md:w-[120%]">
         {faqs.map(({ id, question, answer }, index) => (
-            <div class="w-[90%] border-b border-gray-300 mx-auto">
+            <div class="w-[90%] border-b border-gray-300 mx-auto  ">
                 <button
-                    class="w-full px-4 py-3 text-left text-[10px] font-satoshi text-[#15242F] bg-[#fbfbfb] flex justify-between items-center "
+                    class="w-full px-4 py-3 text-left text-[10px] font-satoshi text-[#15242F] bg-[#fbfbfb] flex justify-between items-center sm:text-[12px]  
+                    md:mt-2 md:bg-[#FFFFFF] md:text-[10px] xl:text-[15px]"
                     onclick={`document.getElementById('${id}').classList.toggle('hidden'); document.getElementById('flecha${index}').classList.toggle('rotate-180')`}
                 >
                     {question}
@@ -56,21 +59,30 @@ const faqs = [
                         <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
                     </svg>
                 </button>
-                <div id={id} class="px-4 py-3 text-[12px] hidden bg-white text-gray-700">
+                <div id={id} class="px-4 py-3 text-[12px] hidden bg-white text-gray-700 sm:text-sm">
                     {answer}
                 </div>
             </div>
         ))}
-        <div class="bg-amber-700 w-[85%] h-auto rounded-2xl mt-5 ml-5 p-4">
-
-         <div class=" rounded-full w-10 h-10 ml-15 bg-black">
-            <Image 
-                src={Zorro} 
-                alt="zorro" 
-                class="object-contain max-w-[30px] mt-5 ml-1 "
-            />
-         </div>
-              <h1 class="text-[100px]">hola</h1>
+        </div>
+        <div class=" flex flex-col justify-center items-center bg-[#F5F6FA] max-w-[350px] rounded-2xl mt-5 mx-5 p-4 sm:max-w-[460px] sm:h-60 sm:ml-12 md:md:bg-[#FFFFFF] md:flex md:items-center md:mt-5 md:p-2">
+            <div>
+            <h1 class= " hidden md:block md:text-[#15242F] md:text-[30px] md:font-bold md:font-satoshi md:mt-10 xl:text-[40px] xl:mt-20">
+                <span class="text-[#FF7070]">Preguntas?</span> <br>
+                Respuestas.
+            </h1>
+            </div>
+            <div class=" rounded-full w-12 h-12  bg-[#FFFFFF] flex justify-center items-center sm:mt-5">
+                <Image 
+                    src={Zorro} 
+                    alt="zorro" 
+                    class="object-contain w-[30px] h-[30px]"
+                />
+            </div>
+            <h3 class="text-[12px] text-center mt-5 sm:mt-10 sm:text-sm md:text-[15px]">Soy Un ser Humano como tú ¡ Pregúntame Cualquier cosa!</h3>
+            <div class="flex justify-center bg-[#FFFFFF] mt-5 w-[100%] h-[40px] text-center rounded-2xl p-2 border-1 border-gray-300 font-bold font-satoshi shadow-2xs sm:mt-10 sm:text-sm md:w-[90%] md:h-[20%] md:text-[10px] xl:text-[15px] xl:mb-10 ">
+                <a href="" class="text-center">Contáctenos</a>
+            </div>
         </div>
         
     </div>
