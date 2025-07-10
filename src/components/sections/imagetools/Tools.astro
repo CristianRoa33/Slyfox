@@ -4,19 +4,12 @@ import figma from "@images/figma.webp"
 
 import { imagenes } from "@components/images-tools.astro";
 
-const filas = [
-    imagenes.slice(0, 5),
-    imagenes.slice(5, 10),
-    imagenes.slice(10)
-];
-
 ---
-
 <section>
-    <div class="flex justify-evenly items-center mt-20 ">
+    <div class="flex justify-evenly items-center mt-2 ">
         <div>
         <Image
-        src={figma} 
+            src={figma} 
             alt="" 
             class="object-contain w-[40px] mt-35 ml-15 mr-15 sm:ml-20 sm:w-[50px] md:w-[60px] md:ml-50 md:mr-30 lg:w-[90px]"
         />
@@ -36,32 +29,51 @@ const filas = [
             </p>
         </div>
     </div>
-    <div class="space-y-5 sm:mt-15">
-        {filas.map((fila, i) => (
-        <div
-            class={`grid gap-4 m-10 sm:ml-15 lg:ml-30 ${
-            fila.length === 5
-            ? "grid-cols-5"
-            : "grid-cols-3 justify-self-center"
-            }`
-        }
-        >
-            {fila.map((img, j) => (
-                <img
-                    src={img.src}
-                    alt={`img ${i * 5 + j + 1}`}
-                    class="object-contain w-full h-auto max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[90px]"
-                    loading="lazy"
+    <div class="container space-y-15 mt-10 xl:ml-50 xl:mt-20">
+        {imagenes.map((img, index) => (
+            <div class={`item ${index >= imagenes.length - 3 ? 'last-row' : ''}`}
+            >
+                <img src={img.src} alt={img.alt} title={img.title} 
+                class="object-contain w-full  max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[90px] xl:max-w-[110px]" 
                 />
-            ))}
-        </div>
-    ))}
+            </div>
+        ))}
     </div>
     <div>
-        <p class="text-sm font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] m-15 sm:text-base md:text-[13px] md:w-[300px] md:p-10 md:text-star md:ml-100 lg:ml-150 xl:ml-300 xl:text-[18px] xl:w-100">
+        <p class="text-sm font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] m-10 
+            sm:text-base md:text-[13px] md:w-[300px] md:p-10 md:text-star md:ml-100 lg:ml-150 xl:ml-300 xl:text-[18px] xl:w-100"
+            >
             <span class="text-[#FF7070] font-satoshi ">OYE!!!!</span> 
             <br>
             La tecnología avanza, y nosotros con ella. Si no lo sabemos, lo aprendemos. Si lo aprendemos, lo perfeccionamos.
         </p>
     </div>
 </section>
+
+
+<style>
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-row:nth-child(11) {
+    grid-column: 2;
+}
+.last-row:nth-child(12) {
+    grid-column: 3;
+}
+.last-row:nth-child(13) {
+    grid-column: 4;
+    align-items: flex-start;
+}
+</style>
+
+

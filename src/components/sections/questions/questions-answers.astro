@@ -1,0 +1,119 @@
+---
+import Image from "astro/components/Image.astro";
+import Zorro from "@images/zorro.webp";
+
+const faqs = [
+  {
+    id: "respuesta1",
+    question: "¿Qué servicios ofrece SlyFox?",
+    answer: "SlyFox ofrece una amplia gama de servicios digitales que incluyen diseño UI/UX, desarrollo web, desarrollo móvil y de aplicaciones, así como soluciones de software a medida."
+  },
+  {
+    id: "respuesta2",
+    question: "¿Qué nos hace únicos en comparación con otras empresas de diseño y desarrollo?",
+    answer: "En SlyFox, nos destacamos por nuestra combinación de diseño UI excepcional y desarrollo web de vanguardia. Nuestro enfoque integrado nos permite ofrecer soluciones digitales completas que no solo son visualmente impresionantes, sino también altamente efectivas en la generación de resultados"
+  },
+  {
+    id: "respuesta3",
+    question: "¿Cómo funciona el proceso de trabajo con SlyFox?",
+    answer: "Nuestro proceso comienza con una consulta inicial donde discutimos tus necesidades y objetivos. A partir de ahí, nuestro equipo trabaja estrechamente contigo en cada etapa del proyecto, desde la conceptualización y el diseño hasta el desarrollo y la implementación. Nos esforzamos por mantener una comunicación abierta y transparente en todo momento para garantizar que tus expectativas se cumplan."
+  },
+  {
+    id: "respuesta4",
+    question: "¿Qué tipo de garantías ofrecen en sus servicios?",
+    answer: "En SlyFox, respaldamos la calidad de nuestros servicios con una sólida garantía. Esto incluye garantías de satisfacción en el diseño UI/UX, así como garantías de funcionamiento y rendimiento en el desarrollo web y móvil. Si algo no está a la altura de tus expectativas, nos comprometemos a corregirlo rápidamente y sin costo adicional para ti."
+  },
+  {
+    id: "respuesta5",
+    question: "¿Qué tipo de soporte ofrecen después del lanzamiento del proyecto?",
+    answer: "Nuestro compromiso con tu éxito no termina con el lanzamiento del proyecto. SlyFox ofrece servicios de mantenimiento continuo y soporte técnico las 24 horas del día, los 7 días de la semana, para garantizar que tu sitio web o aplicación funcione de manera óptima en todo momento y esté protegido contra cualquier problema técnico que pueda surgir."
+  },
+];
+
+
+---
+<section class="w-full bg-[#F5F6FA] dark:bg-[#0D0D0D] p-1  ">
+    <div class="bg-[#fbfbfb] rounded-2xl m-8 pb-8">
+        <div class="flex">
+            <Image 
+                src={Zorro} 
+                alt="" 
+                class="object-contain max-w-[30px] mt-5 ml-3"
+            />
+            <h1 class="text-[#15242F] text-[15px] font-bold font-satoshi mt-4 ml-4 ">
+                Preguntas? <br>
+                Respuestas.
+            </h1>
+        </div>
+        {faqs.map(({ id, question, answer }, index) => (
+            <div class="w-[90%] border-b border-gray-300 mx-auto">
+                <button
+                    class="w-full px-4 py-3 text-left text-[10px] font-satoshi text-[#15242F] bg-[#fbfbfb] flex justify-between items-center "
+                    onclick={`document.getElementById('${id}').classList.toggle('hidden'); document.getElementById('flecha${index}').classList.toggle('rotate-180')`}
+                >
+                    {question}
+                    <svg class="w-5 h-5 transform transition-transform duration-200 ml-0" id={`flecha${index}`} viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+                    </svg>
+                </button>
+                <div id={id} class="px-4 py-3 text-[12px] hidden bg-white text-gray-700">
+                    {answer}
+                </div>
+            </div>
+        ))}
+        <div class="bg-amber-700 w-[85%] h-auto rounded-2xl mt-5 ml-5 p-4">
+
+         <div class=" rounded-full w-10 h-10 ml-15 bg-black">
+            <Image 
+                src={Zorro} 
+                alt="zorro" 
+                class="object-contain max-w-[30px] mt-5 ml-1 "
+            />
+         </div>
+              <h1 class="text-[100px]">hola</h1>
+        </div>
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+</section>    
+        <!-- <div>
+            <button
+            class="w-full px-4 py-3 text-left text-[15px] font-satoshi flex justify-between items-center"
+            onclick="document.getElementById('respuesta').classList.toggle('hidden')"
+            >
+                ¿Qué servicios ofrece SlyFox?
+            <svg class="w-5 h-5 transform transition-transform duration-200" id="flecha" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+            </svg>
+            </button>
+        <div id="respuesta" class="px-4 py-3 hidden bg-white text-gray-700">
+                SlyFox ofrece una amplia gama de servicios digitales que incluyen diseño UI/UX, desarrollo web, desarrollo móvil y de aplicaciones, así como soluciones de software a medida
+        </div>
+       </div>
+       <div>
+            <button
+            class="w-full px-4 py-3 text-left text-[15px] font-satoshi flex justify-between items-center"
+            onclick="document.getElementById('respuesta').classList.toggle('hidden')"
+            >
+                ¿Qué nos hace únicos en comparación con otras empresas de diseño y desarrollo?
+            <svg class="w-5 h-5 transform transition-transform duration-200" id="flecha" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+            </svg>
+            </button>
+        <div id="respuesta" class="px-4 py-3 hidden bg-white text-gray-700">
+                En SlyFox, nos destacamos por nuestra combinación de diseño UI excepcional y desarrollo web de vanguardia. Nuestro enfoque integrado nos permite ofrecer soluciones digitales completas que no solo son visualmente impresionantes, sino también altamente efectivas en la generación de resultados
+        </div>
+       </div>
+
+    </div>
+</div> -->
+
+
