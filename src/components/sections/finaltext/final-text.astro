@@ -3,18 +3,30 @@ import Image from "astro/components/Image.astro"
 import corazon from "@images/corazon.png"
 
 ---
-<section  class="bg-[#fbfbfb] dark:bg-[#282829]">
-    <div class="mt-10 ml-8 w-[80%] bg-amber-400">
-        <h1 class="text-[15px] ml-5">
-            Lo que nos diferencia es que lo hacemos con amor.
+<section  class=" flex-col justify-center bg-[#fbfbfb] dark:bg-[#282829]">
+    <div class="flex text-center mt-10 ml-8 w-[80%] sm:flex sm:justify-center sm:ml-15 sm:mt-20 md:flex md:justify-center lg:flex lg:justify-center lg:mt-30 xl:flex xl:justify-center 2xl:flex 2xl:justify-center 2xl:mt-60">
+        <h1 class="dark:text-[#F5F5F7] text-[#31323D] text-[20px] ml-5 sm:text-2xl md:text-[35px] lg:text-[45px] lg:ml-20 xl:text-[55px] 2xl:text-[75px] 2xl:ml-60">
+            Lo que nos <span class="text-[#FF7070]">diferencia</span> es que lo <span class="text-[#FF7070]">hacemos</span> 
+            con <span class="text-[#FF7070]">amor</span>.
         </h1>
     </div>
-    <div class="ml-30">
+    <div class="flex justify-center mt-5 sm:mt-10 md:mt-15 lg:mt-20">
         <Image 
             src={corazon} 
             alt="corazon" 
-            class="object-contain w-[30px] h-[30px]"
+            class="object-contain w-[30px] h-[30px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] xl:w-[80px] xl:h-[80px] 2xl:w-[100px] 2xl:h-[100px]"
         />
     </div>
+    <div class="flex justify-center">
+            <button 
+                class="rounded-md font-segoe w-[120px] h-8 text-sm text-[#F5F5F7] bg-[#5137F0] mt-5 sm:mt-10 sm:w-[160px] sm:h-[35px] sm:text-[18px] md:rounded-2xl md:mt-15 md:mb-15 lg:mt-20 2xl:mb-30"
+            >
+                <a href="#"
+                    class="p-2"
+                >
+                    Conócenos
+                </a>
+            </button>
+    </div>        
 </section>
 

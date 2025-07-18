@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import Image from "astro/components/Image.astro"
 import figma from "@images/figma.webp"
 
 import { imagenes } from "@components/images-tools.astro";
@@ -29,19 +29,19 @@ import { imagenes } from "@components/images-tools.astro";
             </p>
         </div>
     </div>
-    <div class="container space-y-15 mt-10 xl:ml-50 xl:mt-20">
+    <div class="container space-y-15 mt-10 xl:ml-20 xl:mt-20 2xl:ml-40">
         {imagenes.map((img, index) => (
             <div class={`item ${index >= imagenes.length - 3 ? 'last-row' : ''}`}
             >
-                <img src={img.src} alt={img.alt} title={img.title} 
+                <img src ={img.src} alt={img.alt} title={img.title} width={50} height={50}
                 class="object-contain w-full  max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[90px] xl:max-w-[110px]" 
                 />
             </div>
         ))}
     </div>
-    <div>
+    <div class="xl:flex xl:justify-evenly 2xl:justify-center-safe">
         <p class="text-sm font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] m-10 
-            sm:text-base sm:ml-20 md:text-[13px] md:w-[300px] md:p-10 md:text-star md:ml-100 lg:ml-150 xl:ml-300 xl:text-[18px] xl:w-100"
+            sm:text-base sm:ml-20 md:text-[13px] md:w-[300px] md:p-10 md:text-star md:ml-100 lg:ml-180 xl:text-left xl:text-[18px] xl:w-100"
             >
             <span class="text-[#FF7070] font-satoshi ">OYE!!!!</span> 
             <br>
