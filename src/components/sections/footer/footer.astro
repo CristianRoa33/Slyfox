@@ -2,14 +2,14 @@
 import Logo from "@components/Shared/Logo.astro";
 import { Image } from "astro:assets";
 import Capa from "@images/Capa_1.webp"
-import Redes from "@components/redes.astro";
+import Redes from "@components/sections/footer/Redes.astro";
 import FooterTextos from "./footerTextos.astro";
 import FooterInfo from "@components/sections/footer/footerInfo.astro"
 
 ---
-<footer class="bg-[#F5F6FA] dark:bg-[#0D0D0D] mt-10  text-[#31323D] dark:text-[#F5F5F7]">
+<footer class="bg-[#F5F6FA] dark:bg-[#0D0D0D] mt-10 text-[#31323D] dark:text-[#F5F5F7]">
     <div class="p-5">
-        <Logo with="99px" />
+        <Logo with="99px"/>
     </div>
     <div class="flex justify-between">
         <FooterTextos />
@@ -21,7 +21,7 @@ import FooterInfo from "@components/sections/footer/footerInfo.astro"
             class="object-contain w-[55px] h-[55px] mt-3 bg-[#FBBC05] ml-6 rounded-full"
             />
             </div>
-            <div class="flex ">
+            <div>
                 <Redes/> 
             </div>
         </div>
