@@ -5,6 +5,8 @@ import X from "@images/X.webp"
 import Instagram from "@images/Instagram.webp"
 import TikTok from "@images/Tiktok.webp"
 import Linkedin from "@images/Linkedin.webp"
+import Capa from "@images/Capa_1.webp"
+
 
 import { Image } from "astro:assets";
 
@@ -17,16 +19,26 @@ export const redes = [
     {src: Linkedin , alt:"LinkedIn", title: "LinkedIn", href: "https://linkedin.com/in/tuPerfil" },
 ]
 ---
+<div class="flex flex-col mr-8 mt-3 sm:ml-10 md:mr-20">
+            <div>
+            <Image
+            src={Capa} 
+            alt="Fox" 
+            class="object-contain w-[55px] h-[55px] mt-3 bg-[#FBBC05] ml-6 rounded-full sm:w-[75px] sm:h-[75px] sm:ml-8 lg:w-[100px] lg:h-[100px] lg:ml-11 xl:w-[120px] xl:h-[120px]" 
+            />
+            </div>
 
-<div class="flex mt-2 gap-1">
+<div class="flex mt-2 gap-1 sm:mt-5">
     {redes.map((rede) => (
     <a href={rede.href} target="_blank" rel="noopener noreferrer">
     <Image
         src={rede.src}
         alt={rede.alt}
         title={rede.title}
-        class="object-contain w-[15px] h-[15px] rounded-full"
+        class="object-contain w-[15px] h-[15px] sm:w-[20px] sm:h-[20px] lg:w-[30px] lg:h-[30px] xl:w-[40px] xl:h-[40px]"
     />
     </a>
     ))}
 </div>
+</div>
+
