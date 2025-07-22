@@ -1,0 +1,33 @@
+---
+import Facebook from "@images/Facebook.webp"
+import Be from "@images/Be.webp"
+import X from "@images/X.webp"
+import Instagram from "@images/Instagram.webp"
+import TikTok from "@images/Tiktok.webp"
+import Linkedin from "@images/Linkedin.webp"
+
+import { Image } from "astro:assets";
+
+export const redes = [
+    {src: Facebook , alt:"Facebook", title: "Facebook", href: "https://facebook.com/tuPerfil" },
+    {src: Be , alt:"Behance", title: "Behance", href: "https://www.behance.net/tuPerfil" },
+    {src: X , alt:"X", title: "X", href: "https://twitter.com/tuPerfil" },
+    {src: Instagram , alt:"Instagram", title: "Instagram", href: "https://instagram.com/tuPerfil" },
+    {src: TikTok , alt:"TikTok", title: "TikTok", href: "https://www.tiktok.com/@tuPerfil" },
+    {src: Linkedin , alt:"LinkedIn", title: "LinkedIn", href: "https://linkedin.com/in/tuPerfil" },
+]
+---
+    
+
+<div class="flex mt-2 gap-1">
+    {redes.map((rede) => (
+    <a href={rede.href} target="_blank" rel="noopener noreferrer">
+    <Image
+        src={rede.src}
+        alt={rede.alt}
+        title={rede.title}
+        class="object-contain w-[15px] h-[15px] rounded-full"
+    />
+    </a>
+    ))}
+</div>
