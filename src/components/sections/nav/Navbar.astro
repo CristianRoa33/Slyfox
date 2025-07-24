@@ -1,30 +1,28 @@
 ---
 import Logo from "@components/Shared/Logo.astro";
 import DarkMode from '@components/sections/nav/Darkmode.astro';
+import Conocenos from "@components/Shared/buttonConocenos.astro"
 
 
 const links = [
     {name: 'Inicio', href: '/'},
-    {name: 'Nuestro Equipo', href: '/about'},
+    {name: 'Nuestro Equipo', href: '#'},
     {name: 'Servicios', href: '/contact'}, 
-]
+    ]
 ---
-<div 
-    class="w-full bg-[#fbfbfb] dark:bg-[#282829] md:w-full lg:w-full "
+<header 
+    class="w-full bg-[#fbfbfb] dark:bg-[#000000] "
 >
     <nav 
-        class="relative w-full h-15 flex flex-row justify-between items-baseline p-2 
-        bg-[#fbfbfb] dark:bg-[#282829] md:w-full md:h-30 
-        md:pl-15 md:flex md:justify-center lg:w-full lg:h-40 lg:flex lg:justify-between "
+        class="w-full h-full flex items-stretch mt-2 md:flex md:justify-around md:h-30 lg:h-56 2xl:flex 2xl:justify-evenly"
     >
-        <div class="m-[15px] lg:ms-55"
+        <div class="m-3 md:ml-10 "
         >
-            <Logo width="99px" />
+            <Logo with="99px"/>
         </div>
             <ul 
-                class="hidden md:flex md:flex-row md:justify-evenly md:mr-2 md:gap-5 md:ml-15 
-                md:font-segoe md:text-[#1E1E1E] md:dark:text-[#ffffffeb] lg:flex 
-                lg:justify-evenly lg:gap-x-5 lg:font-segoe lg:text-[#1E1E1E] lg:dark:text-[#ffffffeb] lg:ml-3"
+                class="hidden md:flex md:gap-5 md:items-stretch md:mt-3 md:text-[14px] md:ml-25
+                md:font-segoe md:text-[#1E1E1E] md:dark:text-[#ffffffeb] lg:ml-20 lg:flex lg:justify-center lg:items-stretch xl:flex xl:justify-center xl:items-stretch xl:ml-35 2xl:flex 2xl:justify-center 2xl:items-stretch 2xl:mt-4 2xl:ml-45"
             >
                 {links.map(link => (
                     <li>
@@ -34,31 +32,27 @@ const links = [
                         </a>
                     </li>
                 ))}
+                
             </ul>
-            <button 
-                class="hidden rounded-sm font-segoe text-sm text-[#F5F5F7] bg-[#5137F0] md:flex 
-                md:w-22 md:h-8 md:mr-35 md:ml-3.5 md:rounded-lg md:bg-[#5137F0] md:text-[#F5F5F7]
-                md:mt-2 lg:mr-80 lg:items-center"
+            <div 
+                class="hidden md:flex mt-3 2xl:mt-4
+                "
             >
-                <p 
-                    class=" md:p-2"
-                >
-                    Conocenos
-                </p>
-            </button>
-        <div class="absolute transform translate-x-[1px] translate-y-[12px] right-3 top-0 mr-15 mt-2"
+                <Conocenos /> 
+            </div>
+        <div class="mt-3 ml-auto md:ml-1 md:mt-4 lg:ml-0"
         >
             <DarkMode />
         </div>
             <button 
                 id="menuButton" 
-                class=" flex w-10 h-10 space-y-2 p-2 font-bold  text-[#1E1E1E] dark:text-[#ffffffeb] 
-                bg-[#fbfbfb] dark:bg-[#282829] md:hidden lg:hidden"
+                class=" flex w-10 h-10 space-x-4 p-3 font-bold  text-[#1E1E1E] dark:text-[#ffffffeb] 
+                bg-[#fbfbfb] dark:bg-[#000000] md:hidden lg:hidden"
             >
                 ☰
             </button>
     </nav>
-<div/>   
+<header/>   
 
 <style>
     a {

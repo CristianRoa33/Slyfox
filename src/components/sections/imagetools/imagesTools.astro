@@ -1,0 +1,83 @@
+---
+import React from "@images/react.webp"
+import Nestjs from "@images/nestjs-icon-2.webp"
+import Aws from "@images/aws.webp"
+import Nodejs from "@images/node_js.webp"
+import Js from "@images/js.webp"
+import Ai from "@images/adobe_illustrator.webp"
+import Vue from "@images/vue.webp"
+import Angular from "@images/angular.webp"
+import Html from "@images/html_5.webp"
+import Oracle from "@images/oracle.webp"
+import Tailwind from "@images/twain.webp"
+import Mongodb from "@images/mongos.webp"
+import Css from "@images/css_3.webp"
+
+import { Image } from "astro:assets";
+
+
+export const imagenes = [
+    {src: React , alt:"react", title: "React", },
+    {src: Aws , alt:"aws", title: "aws"},
+    {src: Nodejs , alt:"nodejs", title: "nodejs"},
+    {src: Nestjs , alt:"nestjs", title: "nestjs"},
+    {src: Js , alt:"js", title: "js"},
+    {src: Ai, alt:"ai", title: "ai"},
+    {src: Vue , alt:"vue", title: "vue"},
+    {src: Angular , alt:"angular", title: "angular"},
+    {src: Html , alt:"html", title: "html"},
+    {src: Oracle , alt:"oracle", title: "oracle"},
+    {src: Tailwind , alt:"tailwind", title: "tailwind"},
+    {src: Mongodb , alt:"mongodb", title: "mongodb"},
+    {src: Css , alt:"css", title: "css"},
+]
+---
+<div class="flex justify-center">
+<div class="container space-y-15 mt-10 md:mt-15 lg:mt-20 ">
+    {imagenes.map((img, index) => (
+        <div class={`item ${index >= imagenes.length - 3 ? 'last-row' : ''}`}
+        >
+            <Image  
+                src={img.src} 
+                alt={img.alt} title={img.title}
+                class="object-contain w-full  max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[90px] xl:max-w-[110px] img-hover-grow" 
+            />
+            </div>
+        ))}
+</div>
+</div>
+
+<style>
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-row:nth-child(11) {
+    grid-column: 2;
+}
+.last-row:nth-child(12) {
+    grid-column: 3;
+}
+.last-row:nth-child(13) {
+    grid-column: 4;
+    align-items: flex-start;
+}
+
+.img-hover-grow:hover {
+    transform: scale(1.3);
+    
+}
+
+
+
+
+</style>

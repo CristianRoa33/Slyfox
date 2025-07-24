@@ -5,14 +5,15 @@ import Containertitle from '@components/sections/containerImage/Container-title.
 import Banner from '@components/sections/containerImage/Banner.astro';
 import Cards_Mobile from '@components/sections/cards/Cards-mobile.astro';
 import Cards from '@components/sections/cards/Cards.astro';
-import Cards_Servicios from '@components/sections/cards/Cards-servicios.astro';
+import CardsDesk from '@components/sections/cards/Cards-desk.astro';
 import TeamServices from '@components/sections/teamServices/Team-services.astro';
-import { tarjetas } from "@components/information-cards.astro"
+import { tarjetas } from "@components/sections/cards/information-cards.astro"
 import Tools from '@components/sections/imagetools/Tools.astro';
 import QuestionsAnswers from '@components/sections/questions/questions-answers.astro';
 import Finaltext from "@components/sections/finaltext/final-text.astro"
 import Footer from '@components/sections/footer/footer.astro';
 import { redes } from '@components/sections/footer/Redes.astro';
+
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -25,7 +26,7 @@ import { redes } from '@components/sections/footer/Redes.astro';
     <Banner />
     <Cards_Mobile />
     <Cards/>
-    <Cards_Servicios tarjetas = {tarjetas}/>
+    <CardsDesk tarjetas = {tarjetas}/>
     <TeamServices/>
     <Tools />
     <QuestionsAnswers />

@@ -1,21 +1,29 @@
 ---
+import { Image } from "astro:assets";
+import Image170 from "@images/image170.png"
+import Image171 from "@images/image171.png"
+import Image172 from "@images/image172.png"
+import Image169 from "@images/image169.png"
+import Image173 from "@images/image173.png"
+import Image174 from "@images/image174.png"
+
 const imagenes = [
-    { src:"/src/assets/images/image170.png" },
-    { src:"/src/assets/images/image171.png" },
-    { src:"/src/assets/images/image172.png" },
-    { src:"/src/assets/images/image169.png" },
-    { src:"/src/assets/images/image173.png" },
-    { src:"/src/assets/images/image174.png" },
+    { src: Image170 , alt:"react", title: "React",  },
+    { src: Image171 , alt:"react", title: "React", },
+    { src: Image172 , alt:"react", title: "React", },
+    { src: Image169 , alt:"react", title: "React", },
+    { src: Image173 , alt:"react", title: "React", },
+    { src: Image174 , alt:"react", title: "React", },
 
 ]
 
 ---
-<section class="w-full h-full bg-[#fbfbfb] dark:bg-[#282829] ">
+<section class="w-full h-full bg-[#fbfbfb] dark:bg-[#000000] ">
     <div>
-        <div class="grid grid-cols-6 pl-5 pr-5 w-[100%] bg-[#fbfbfb] dark:bg-[#282829] gap-x-2 xl:pl-35 xl:pr-20 xl:gap-2 xl:w-full"
+        <div class="grid grid-cols-6 pl-5 pr-5 w-[100%] bg-[#fbfbfb] dark:bg-[#000000] gap-x-2 xl:pl-35 xl:pr-20 xl:gap-2 xl:w-full"
         >
             {imagenes.map((imagen, index)=>(
-                <img 
+                <Image 
                 src={imagen.src} 
                 alt={`imagen ${index + 1}`}
                 />
@@ -24,9 +32,9 @@ const imagenes = [
     </div>
 
     <div class="md:flex md:mt-6 xl:mt-20 ">
-        <div class="hidden md:flex items-center justify-center w-full h-full ml-5 bg-[#fbfbfb] dark:bg-[#282829] xl:ml-80">
+        <div class="hidden md:flex items-center justify-center w-full h-full ml-5 bg-[#fbfbfb] dark:bg-[#000000] xl:ml-80">
             <p 
-                class="text-center text-[16px] text-[#31323D] dark:text-[#F5F5F7] font-bold font-satoshi 
+                class="text-[16px] text-left text-[#31323D] dark:text-[#F5F5F7] font-bold font-satoshi 
                 md:mt-8 md:p-2 md:ml-15 xl:text-[32px]  xl:ml-20 xl:p-8"
             >
                 Nuestros clientes son nuestra mejor carta de presentación. Más que un servicio, ofrecemos soluciones tecnológicas que se adaptan a cada necesidad. Confiamos en la calidad, la innovación y el compromiso para hacer crecer tu negocio con software a la medida.
