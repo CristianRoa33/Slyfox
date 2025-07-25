@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import Image170 from "@images/image170.png"
+import Image171 from "@images/image171.png"
+import Image172 from "@images/image172.png"
+import Image169 from "@images/image169.png"
+import Image173 from "@images/image173.png"
+import Image174 from "@images/image174.png"
+
+const imagenes = [
+    { src: Image170 , alt:"Image170", title: "Image170",  },
+    { src: Image171 , alt:"Image171", title: "Image171", },
+    { src: Image172 , alt:"Image172", title: "Image172", },
+    { src: Image169 , alt:"Image169", title: "Image169", },
+    { src: Image173 , alt:"Image173", title: "Image173", },
+    { src: Image174 , alt:"Image174", title: "Image174", },
+
+]
+---
+<div 
+    class="grid grid-cols-6 p-6 w-full bg-[#fbfbfb] dark:bg-[#000000] gap-2 sm:p-9 
+    lg:p-12 xl:p-18 2xl:p-25"
+>
+    {imagenes.map((imagen, index)=>(
+        <Image 
+            src={imagen.src} 
+            alt={`imagen ${index + 1}`}
+        />
+    ))}
+</div>

@@ -1,0 +1,85 @@
+---
+import Stars from "@components/sections/Banner/bannerStars.astro"
+import Customer from "@components/sections/Banner/bannerCustomer.astro"
+import Phones from "@components/sections/Banner/bannerPhones.astro"
+import Textmovile from "@components/sections/Banner/bannerDataMovile.astro"
+
+---
+<section class=" w-full flex flex-col items-center gap-0.5 self-stretch bg-[#fbfbfb] dark:bg-[#000000] h-35 sm:h-45 md:h-65 lg:h-95 xl:h-100">
+    <h2
+        class="text-[20px] font-bold font-satoshi pt-5 mt-8 text-center 
+        text-[#1E1E1E] dark:text-[#ffffffeb] sm:mt-10 
+        md:text-4xl md:text-center md:mt-20 lg:text-6xl lg:mt-30">
+        Lo hacemos por Ti
+    </h2>
+    <div class=" flex justify-center items-center gap-x-5 mt-0 lg:mt-10">
+        <Customer />
+    <div class="flex flex-col items-center justify-center mt-0 mr-1 lg:mt-1 ">
+        <Stars /> 
+        <p 
+            id="slide" 
+            class=" font-satoshi text-end text-[10px] text-[#1E1E1E] dark:text-[#ffffffeb] mt-0 mr-10 
+            sm:text-base md:text-sm md:mr-16 lg:text-[15px]">
+            Clientes de Confianza
+        </p>
+    </div>
+</section>
+<section class="w-full h-full bg-[#fbfbfb] dark:bg-[#000000] ">
+    <div>
+        <Phones /> 
+    </div>
+    <div class="md:grid md:grid-cols-2 md:mt-6 xl:mt-20 ">
+        <div class="hidden md:flex items-center justify-center w-full h-full ml-5 bg-[#fbfbfb] dark:bg-[#000000] xl:ml-80">
+            <p 
+                class="text-[16px] text-left text-[#31323D] dark:text-[#F5F5F7] font-bold font-satoshi 
+                md:mt-8 md:p-2 md:ml-15 xl:text-[32px]  xl:ml-20 xl:p-8"
+            >
+                Nuestros clientes son nuestra mejor carta de presentación. Más que un servicio, ofrecemos soluciones tecnológicas que se adaptan a cada necesidad. Confiamos en la calidad, la innovación y el compromiso para hacer crecer tu negocio con software a la medida.
+            </p>
+        </div>            
+    <div class="md:flex md:flex-col md:justify-center md:items-start md:bg-amber-300 " >
+           <div>
+            <Textmovile / >
+           </div>
+           
+            <!-- texto para moviles -->
+           
+            <!-- texto para pantallas desde 768px -->
+            <p 
+                class="hidden md:flex md:text-[#36455D] md:dark:text-[#F5F5F7] 
+                md:text-[14px] md:font-bold md:font-satoshi md:mt-1  xl:ml-17 xl:mt-8 xl:text-[18px]"
+            >
+                Empresas confían en nosotros
+            </p>
+            
+            
+        </div>
+    </div>
+</section>    
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    
+    #slide {
+        animation: slide-up 1.8s cubic-bezier(.25,.46,.45,.94) both;
+    }
+
+    @keyframes slide-up {
+    from {
+        transform: translatey(200px);
+    } to {
+        transform: translatey(0);
+    }
+    }
+
+</style>
+

@@ -4,21 +4,22 @@ import { Image } from "astro:assets"
 import LogoLight from "@images/logo-slyfox-light.webp"
 import LogoDark from "@images/logo-slyfox-dark.webp"
 
-const {width} = Astro.props;
+const {width , className=""} = Astro.props;
 ---
 
 
 
-<div style={"width: " + width}>
+<div style={width ? "width: " + width : ""}>
     <Image 
-        class="dark:hidden inline w-[61px] sm:w-[70px] md:w-[80px] lg:w-[100px] xl:w-[110px] 2xl:w-[130px]"
+        class={"dark:hidden inline " + className}
         src={LogoLight} 
         alt="Logo de la empresa Slyfox" 
     />
 
     <Image 
-        class="hidden dark:inline w-[61px] sm:w-[70px] md:w-[80px] lg:w-[100px] xl:w-[110px] 2xl:w-[130px]"
+        class={"hidden dark:inline"+ className}
         src={LogoDark} 
         alt="Una descripción de mi imagen."
     />
 </div>
+

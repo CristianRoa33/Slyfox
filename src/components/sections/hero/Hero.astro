@@ -2,27 +2,28 @@
 import Logo from "@components/Shared/Logo.astro";
 ---
 
-<div class="w-full h-80 sm:h-100 bg-[#F5F6FA] dark:bg-[#0D0D0D]  md:h-120 lg:h-200">
+<div class="w-full h-80 flex justify-center  sm:h-100 bg-[#F5F6FA] dark:bg-[#0D0D0D]  md:h-120 lg:h-200">
   <div
-    class="flex flex-col items-center  justify-center text-center px-2.5 sm:px-36 lg:py-[80px] 2xl:px-[400px] py-10 sm:py-10 2xl:py-[100px]"
+    class="flex flex-col items-center justify-center text-center px-2.5 sm:px-16  lg:py-[80px] 2xl:px-[400px] py-10 sm:py-10 2xl:py-[100px]"
   >
-      <Logo/>
+      <Logo className=" w-[90px] sm:w-[120px] md:w-[130px] lg:w-[170px] xl:w-[210px] 2xl:w-[220px]"/>
     <h1
       class="text-base sm:text-3xl lg:text-6xl lg:mt-30
             text-[#31323D] dark:text-[#F5F5F7]
-            font-bold font-satoshi
+            font-extrabold font-satoshi
             mt-5 sm:mt-16 xl:mt-28
             mb-2 sm:mb-10 xl:mb-20 ">
             Transformamos Ideas<br />en Experiencia<span
         class="text-[#FF7070] inline-block title-dot">.</span>
     </h1>
-    <h2
-      class="text-sm sm:text-sm md:text-lg lg:text-2xl font-bold text-[#131b27] dark:text-[#86868B] lg:mt-20"
+    <h2 class="text-[15px] sm:text-sm md:text-lg font-bold text-[#131b27] dark:text-[#86868B] lg:hidden"
     >
-      Software a la medida optimizado para SEO. Creamos aplicaciones web y
-      móviles rápidas, escalables y visibles en buscadores. Potencia tu negocio
-      con soluciones que combinan rendimiento, experiencia de usuario y
-      conversión digital.
+      Software a la medida optimizado para SEO. Creamos aplicaciones web y móviles rápidas, escalables y visibles en buscadores. Potencia tu negocio con soluciones que combinan rendimiento, experiencia de usuario y conversión digital.
+    </h2>
+    <h2 
+      class="hidden lg:block lg:text-xl xl:text- font-bold text-[#131b27] dark:text-[#86868B]"
+    >
+      Desarrollamos software a la medida optimizado para SEO, asegurando alto rendimiento, escalabilidad y visibilidad en buscadores. Creamos aplicaciones web y móviles con código limpio y estrategias de optimización, mejorando velocidad de carga, experiencia de usuario (UX) y posicionamiento en Google. Implementamos arquitectura eficiente, desarrollo responsivo y técnicas avanzadas como SEO técnico, indexación optimizada y estrategias de conversión digital. Potencia tu negocio con soluciones tecnológicas que no solo funcionan, sino que también destacan en el mercado digital.
     </h2>
   </div>
 </div>

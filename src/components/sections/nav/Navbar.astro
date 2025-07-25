@@ -14,14 +14,14 @@ const links = [
     class="w-full bg-[#fbfbfb] dark:bg-[#000000] "
 >
     <nav 
-        class="w-full h-full flex items-stretch mt-2 md:flex md:justify-around md:h-30 lg:h-56 2xl:flex 2xl:justify-evenly"
+        class="w-full h-15 flex items-start md:flex md:justify-around md:h-30 lg:h-35 xl:h-45 2xl:flex 2xl:justify-evenly"
     >
         <div class="m-3 md:ml-10 "
         >
-            <Logo with="99px"/>
+            <Logo className=" w-[51px] sm:w-[70px] md:w-[70px] lg:w-[100px] xl:w-[110px] 2xl:w-[110px]"/>
         </div>
             <ul 
-                class="hidden md:flex md:gap-5 md:items-stretch md:mt-3 md:text-[14px] md:ml-25
+                class="hidden md:flex md:gap-5 md:items-stretch md:mt-3 md:text-[14px] md:ml-20
                 md:font-segoe md:text-[#1E1E1E] md:dark:text-[#ffffffeb] lg:ml-20 lg:flex lg:justify-center lg:items-stretch xl:flex xl:justify-center xl:items-stretch xl:ml-35 2xl:flex 2xl:justify-center 2xl:items-stretch 2xl:mt-4 2xl:ml-45"
             >
                 {links.map(link => (
@@ -34,12 +34,7 @@ const links = [
                 ))}
                 
             </ul>
-            <div 
-                class="hidden md:flex mt-3 2xl:mt-4
-                "
-            >
-                <Conocenos /> 
-            </div>
+                <Conocenos className="hidden md:block  md:mt-3 rounded-md font-segoe w-[85px] h-6 text-sm text-[#F5F5F7] bg-[#5137F0]" /> 
         <div class="mt-3 ml-auto md:ml-1 md:mt-4 lg:ml-0"
         >
             <DarkMode />
