@@ -1,14 +1,24 @@
 ---
-import team from "@images/lifestyle_cycling__dz3moutppo4m_large.jpg.webp"
+import imagenDesk from "@images/imagendesk.webp"
 import Image from "astro/components/Image.astro";
+import imagenMobile from "@images/imagenmobilepng.webp"
 
 
 ---
 
 <section>
-    <div class="xl:mt-20 xl:w-full">
+    <div class="sm:flex xl:mt-20 xl:w-full">
         <Image 
-            src={team} 
+            src={imagenDesk} 
+            alt="" 
+            class=""       
+        />
+    </div>
+</section>
+<section>
+    <div class="hidden">
+        <Image 
+            src={imagenMobile} 
             alt="" 
             class=""       
         />
