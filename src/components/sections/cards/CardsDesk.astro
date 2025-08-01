@@ -8,28 +8,29 @@ const titulo = "Descubre más de tu compañero perfecto."
 ---
 <section class="w-full h-full bg-[#fbfbfb] dark:bg-[#000000] mt-8 xl:mt-40"> 
     <div class= "w-[280px] p-3 xl:w-160 xl:ml-10">
-        <h2 class="text-[#1E1E1E] dark:text-[#ffffffeb] font-satoshi ml-6 p-1 text-[15px] md:mt-15 lg:text-xl xl:text-[42px ]">
+        <h2 class="text-[#1E1E1E] dark:text-[#ffffffeb] font-satoshi ml-6 p-1 text-[15px] md:mt-15 lg:text-xl xl:text-[42px]">
             {titulo}
         </h2>
     </div>
     
-<div id="carousel" class="bg-[#fbfbfb] dark:bg-[#000000] flex flex-row gap-1 overflow-auto scrollbar-hide no-scrollbar snap-x p-5 ease-linear xl:gap-1 xl:mt-20 lg:p-5 xl:p-5 2xl:p-10">
+<div id="carousel"
+    class="bg-[#fbfbfb] dark:bg-[#000000] parent overflow-auto scrollbar-hide no-scrollbar snap-x p-3 ease-linear lg:overflow-hidden lg:p-4 xl:p-6 2xl:p-8">
     {tarjetas.map((tarjeta) => (
         <div class="snap-center">
-            <div class="bg-[#f5f6f9] dark:bg-[#0D0D0D] flex items-center justify-center w-60 h-60 mt-1 ml-1 mr-1 rounded-lg sm:w-60 sm:h-70 md:h-90 lg:w-47 lg:h-80 xl:w-65 2xl:w-80 2xl:h-100 overflow-hidden xl:ml-2 xl:mr-2">
-                <Image src={tarjeta.src} alt={tarjeta.titulo} class="w-20 md:w-30 mx-auto" /></div>
-            <h3 class="text-[#1E1E1E] dark:text-[#ffffffeb] font-satoshi mt-1 ml-5 md:text-[14px] md:font-bold md:ml-2 md:mt-3 xl:text-[22px]">{tarjeta.titulo}</h3>
-            <p class="text-[#86868b] dark:text-[#ffffffeb] font-satoshi text-sm p-4 ml-1 md:text-[13px] md:font-bold md:p-2 xl:text-[15px] xl:mb-5">{tarjeta.descripcion}</p>
-            <ul class="list-disc pl-5 space-y-2">
+            <div class="bg-[#f5f6f9] dark:bg-[#0D0D0D] card overflow-hidden w-[240px] h-[220px] md:h-[300px] lg:w-[190px] lg:h-[320px] xl:w-[250px] xl:h-[360px] 2xl:w-[350px] 2xl:h-[450px]">
+                <Image src={tarjeta.src} alt={tarjeta.titulo} class="w-20 md:w-25 xl:w-30" /></div>
+            <h3 class="text-[#1E1E1E] dark:text-[#ffffffeb] flex justify-start font-satoshi font-bold mt-2 ml-1.5 text-sm sm:text-base sm:ml-1 md:text-[13px]  md:ml-1 md:mt-3 lg:text-[10px] xl:text-[15px] ">{tarjeta.titulo}</h3>
+            <p class="text-[#86868b] dark:text-[#86868B] font-satoshi font-bold text-left text-sm p-2 sm:text-base sm:p-1 md:text-[12px]  lg:text-[10px] md:p-1 xl:text-[15px] xl:mb-5">{tarjeta.descripcion}</p>
+            <ul class="list-disc p-5 space-y-1">
                 {tarjeta.items.map((item) => (
-                    <li class="text-[#1E1E1E] dark:text-[#ffffffeb] font-satoshi text-sm ml-4 md:text-[12px] md:ml-1 xl:text-[15px] ">{item}</li>
+                    <li class="text-[#86868b] dark:text-[#86868B] font-satoshi text-sm ml-4 sm:text-base md:text-[13px] md:ml-1 lg:text-[10px] xl:text-[15px] ">{item}</li>
                 ))}
             </ul>
         </div>
     ))} 
 </div>
     </div>
-        <div class="flex justify-center items-center mt-2 gap-x-8 mb-10">
+        <div class="flex justify-center mt-2 gap-x-8 mb-15 md:flex md:justify-end md:mr-10 md:mb-5">
         <button id="prev" class="flex items-center w-10 bg-[#333336] text-white p-2 rounded-full">
             ❮
         </button>
@@ -52,7 +53,7 @@ const titulo = "Descubre más de tu compañero perfecto."
     let scrollPosition = 0;
 
     function isMobile() {
-    return window.innerWidth < 769;
+    return window.innerWidth < 1024;
     }
 
     function updateScrollButtons() {
@@ -84,3 +85,18 @@ const titulo = "Descubre más de tu compañero perfecto."
     window.addEventListener("resize", updateScrollButtons);
     });
 </script>
+<style>
+    .parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-column-gap: 11px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+</style>

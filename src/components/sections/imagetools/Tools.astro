@@ -5,41 +5,43 @@ import figma from "@images/figma.webp"
 import Imagenes  from "@components/sections/imagetools/imagesTools.astro";
 
 ---
-<section class="2xl:mt-20">
-    <div class="flex justify-evenly items-center mt-2 ">
-        <div>
-        <Image
-            src={figma} 
-            alt="" 
-            class="object-contain w-[40px] mt-35 ml-15 mr-15 sm:ml-20 sm:w-[50px] md:w-[60px] md:ml-50 md:mr-30 lg:w-[90px] img-hover-grow"
-        />
-        </div>
-        <div class="flex flex-col ml-10 md:mr-20 lg:w-100 xl:w-100 xl:mr-70">
+<section class="">
+        <div class="w-full flex flex-col items-center justify-center text-center md:flex md:flex-row-reverse md:justify-around md:items-center ">
+            <div class="flex flex-col items-center md:flex md:flex-col md:items-start md:mr-15 md:mt-20 2xl:mt-30 2xl:w-[700px]">
             <h3 
-            class="text-left text-[#FF7070] text-[15px] mt-15 font-bold font-satoshi sm:text-[25px] md:text-[15px] lg:text-[16px] xl:text-[20px]">
+            class="text-left text-[#FF7070] text-[19px] mt-10 font-bold font-satoshi sm:text-[25px] md:text-[15px] lg:text-[18px] xl:text-[20px] ">
                 Nuestras Herramientas de Punta
             </h3>
             <h3 
-            class="text-left text-[15px] text-[#36455D] font-bold font-satoshi sm:text-[25px] md:text-[35px] lg:text-[50px] xl:text-[65px]">
-            Full<br>todoterreno.
+            class="text-left text-[20px] text-[#36455D] font-bold font-satoshi sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[45px]">
+            Full <br class="hidden md:block"> todoterreno.
             </h3>
             <p 
-            class="text-left  text-[10px] font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] pr-5 sm:text-[15px] sm:pr-20 lg:text-[16px]">
+            class="w-[280px] flex justify-center mt-1 text-center mb-5 text-[14px] font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] sm:text-[18px] sm:w-[450px] md:flex md:flex-col md:items-start md:text-left md:text-[15px] md:w-[300px] md:mt-5 lg:text-[15px] lg:w-[330px] xl:text-[20px] xl:w-[400px]">
                 Construimos soluciones digitales con las tecnologías más avanzadas del mercado. Desde el backend hasta la interfaz de usuario, usamos herramientas que garantizan rendimiento, escalabilidad y seguridad.
             </p>
+            </div>
+            <div class="md:ml-40 mt-50 xl:ml-60 2xl:ml-110">     
+                <Image
+            src={figma} 
+            alt="" 
+            class="object-contain w-[35px] mt-10 mb-5 sm:w-[50px] md:w-[60px] lg:w-[90px] img-hover-grow"
+                />
         </div>
-    </div>
+        </div>
     <div >
         <Imagenes />
     </div>
-    <div class="xl:flex xl:justify-evenly 2xl:justify-center-safe">
-        <p class="text-sm font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7] m-10 
-            sm:text-base sm:ml-20 md:text-[13px] md:w-[300px] md:p-10 md:text-star md:ml-100 lg:ml-180 xl:text-left xl:text-[18px] xl:w-100"
+    <div class="w-full flex md:flex">
+        <div class="flex justify-center md:flex md:justify-end md:ml-80 md:w-[48%] lg:ml-120 xl:w-[40%] xl:ml-170 2xl:ml-220">
+        <p class="w-[80%] text-[14px] font-bold font-satoshi text-[#31323D] dark:text-[#F5F5F7]  
+            sm:text-base sm:text-[18px] md:text-[15px] lg:text-[15px] xl:text-[20px] "
             >
-            <span class="text-[#FF7070] font-satoshi ">OYE!!!!</span> 
+            <span class="text-[#FF7070] font-satoshi text-[14px] sm:text-[20px] md:text-[15px] lg:text-[18px] xl:text-[20px] ">OYE!!!!</span> 
             <br>
             La tecnología avanza, y nosotros con ella. Si no lo sabemos, lo aprendemos. Si lo aprendemos, lo perfeccionamos.
         </p>
+        </div>
     </div>
 </section>
 
