@@ -1,0 +1,72 @@
+---
+import Image from "astro/components/Image.astro";
+import arrow from "@images/arrow.webp"
+
+
+const faqs = [
+    {
+    id: "respuesta1",
+    question: "¿Qué servicios ofrece SlyFox?" ,
+    answer: "SlyFox ofrece una amplia gama de servicios digitales que incluyen diseño UI/UX, desarrollo web, desarrollo móvil y de aplicaciones, así como soluciones de software a medida."
+    },
+    {
+    id: "respuesta2",
+    question: "¿Qué nos hace únicos en comparación con otras empresas de diseño y desarrollo? ",
+    answer: "En SlyFox, nos destacamos por nuestra combinación de diseño UI excepcional y desarrollo web de vanguardia. Nuestro enfoque integrado nos permite ofrecer soluciones digitales completas que no solo son visualmente impresionantes, sino también altamente efectivas en la generación de resultados"
+    },
+    {
+    id: "respuesta3",
+    question: "¿Cómo funciona el proceso de trabajo con SlyFox?",
+    answer: "Nuestro proceso comienza con una consulta inicial donde discutimos tus necesidades y objetivos. A partir de ahí, nuestro equipo trabaja estrechamente contigo en cada etapa del proyecto, desde la conceptualización y el diseño hasta el desarrollo y la implementación. Nos esforzamos por mantener una comunicación abierta y transparente en todo momento para garantizar que tus expectativas se cumplan."
+    },
+    {
+    id: "respuesta4",
+    question: "¿Qué tipo de garantías ofrecen en sus servicios?",
+    answer: "En SlyFox, respaldamos la calidad de nuestros servicios con una sólida garantía. Esto incluye garantías de satisfacción en el diseño UI/UX, así como garantías de funcionamiento y rendimiento en el desarrollo web y móvil. Si algo no está a la altura de tus expectativas, nos comprometemos a corregirlo rápidamente y sin costo adicional para ti."
+    },
+    {
+    id: "respuesta5",
+    question: "¿Qué tipo de soporte ofrecen después del lanzamiento del proyecto?",
+    answer: "Nuestro compromiso con tu éxito no termina con el lanzamiento del proyecto. SlyFox ofrece servicios de mantenimiento continuo y soporte técnico las 24 horas del día, los 7 días de la semana, para garantizar que tu sitio web o aplicación funcione de manera óptima en todo momento y esté protegido contra cualquier problema técnico que pueda surgir."
+    },
+];
+---
+<div class="flex flex-col justify-center items-center mt-5 md:w-[90%] md:mt-0 overflow-hidden xl:w-[115%] 2xl:w-[120%]">
+    {faqs.map(({ id, question, answer }, index) => (
+        <div class="w-[90%] mt-3 border-b border-gray-300 text-[12px] font-satoshi font-bold ">
+            <input type="checkbox" id={`toggle-${id}`} class="peer hidden" 
+            />
+                <label
+                    for={`toggle-${id}`}
+                    class="w-full cursor-pointer"
+                >
+                    <div class="flex justify-between items-center mb-3">
+                        {question} 
+                        <Image 
+                            src={arrow}
+                            alt=""
+                            class="object-contain"
+                        />
+                    </div>
+                </label>
+                <div class="content max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[500px] m-2 text-[12px] bg-white text-gray-700 sm:text-sm peer-checked:block hidden md:w-[200px]">
+                    {answer}
+                </div>
+        </div>
+    ))}
+</div>
+
+<style>
+input[type='checkbox']:checked + label + .content {
+    display: block;
+}
+
+.content {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+}
+</style>

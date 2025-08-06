@@ -19,19 +19,19 @@ export const redes = [
     {src: Linkedin , alt:"LinkedIn", title: "LinkedIn", href: "https://linkedin.com/in/tuPerfil" },
 ]
 ---
-<div class="flex flex-col mr-8 mt-3 sm:ml-10 md:mr-20">
-            <div>
+<div class="flex flex-col ">
+            <div class="flex justify-center">
             <Image
             src={Capa} 
             alt="Fox" 
-            class="object-contain w-[55px] h-[55px] mt-3 bg-[#FBBC05] ml-6 rounded-full sm:w-[75px] sm:h-[75px] sm:ml-8 lg:w-[100px] lg:h-[100px] lg:ml-11 xl:w-[120px] xl:h-[120px]" 
+            class="object-contain w-[55px] h-[55px] mt-3 bg-[#FBBC05] rounded-full sm:w-[75px] sm:h-[75px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px]" 
             />
             </div>
 
-<div class="flex mt-2 gap-1 sm:mt-5">
-    {redes.map((rede) => (
-    <a href={rede.href} target="_blank" rel="noopener noreferrer">
-    <Image
+        <div class="flex mt-2 gap-1 sm:mt-5">
+        {redes.map((rede) => (
+            <a href={rede.href} target="_blank" rel="noopener noreferrer">
+        <Image
         src={rede.src}
         alt={rede.alt}
         title={rede.title}
@@ -41,4 +41,5 @@ export const redes = [
     ))}
 </div>
 </div>
+
 

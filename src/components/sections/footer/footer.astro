@@ -6,17 +6,16 @@ import FooterInfo from "@components/sections/footer/footerInfo.astro"
 
 ---
 <footer class=" w-full bg-[#F5F6FA] dark:bg-[#0D0D0D] mt-10 text-[#31323D] dark:text-[#F5F5F7]">
-    <div class="p-5">
-        <Logo with="99px"/>
-    </div>
-    <div class="flex justify-between">
+    <div class="grid grid-cols-2 ml-3 md:ml-5 lg:ml-10">
+        <div class="mt-3 md:mt-10">
+        <Logo className=" w-[91px] sm:w-[130px] md:w-[150px] lg:w-[190px] xl:w-[200px] 2xl:w-[200px] "/>
         <FooterTextos />
-            <div>
-                <Redes/> 
-            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+        <Redes/> 
         </div>
     </div>
-    <div class="flex ml-5 mt-2">
+    <div class="mt-5">
         <FooterInfo />
     </div>
 </footer>

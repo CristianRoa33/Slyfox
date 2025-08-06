@@ -1,15 +1,54 @@
 ---
 import Logo from "@components/Shared/Logo.astro";
 import Image from "astro/components/Image.astro";
-import probeta from "@images/Probeta.webp"
+import Probeta from "@images/Probeta.webp"
+import Mandarina from "@images/Mandarina.webp";
+import Patilla from "@images/Patilla.webp";
+import Bomba from "@images/Bomba.webp";
+import Uvas from "@images/Uvas.webp";
+import Hongo from "@images/Hongo.webp";
+import ProbetaRoja from "@images/ProbetaRoja.webp";
+import Rayo from "@images/Rayo.webp";
 
 ---
 
 <div class="w-full h-80 flex justify-center  sm:h-100 bg-[#F5F6FA] dark:bg-[#0D0D0D]  md:h-120 lg:h-200">
   <div
-    class="flex flex-col items-center justify-center text-center px-2.5 sm:px-16  lg:py-[80px] 2xl:px-[400px] py-10 sm:py-10 2xl:py-[100px]"
+    class="relative flex flex-col items-center justify-center text-center px-2.5 sm:px-16  lg:py-[80px] 2xl:px-[400px] py-10 sm:py-10 2xl:py-[100px]"
   >
-      <Logo className=" w-[90px] sm:w-[120px] md:w-[130px] lg:w-[170px] xl:w-[210px] 2xl:w-[220px]"/>
+      <Logo className=" w-[90px] sm:w-[120px] md:w-[130px] lg:w-[170px] xl:w-[230px] 2xl:w-[220px]"/>
+    <div class="hidden absolute md:block md:top-10 md:left-45 lg:top-25 lg:left-60 xl:top-18 xl:left-75 2xl:top-20 2xl:left-125 ">
+    <Image
+      src={Probeta} alt="Probeta" class="md:w-[25px] lg:w-[35px] xl:w-[45px] 2xl:w-[50px] "/> 
+    </div>
+    <div class="hidden absolute md:block md:top-25 md:left-135 lg:top-45 lg:left-185 xl:top-35 xl:left-250 2xl:top-40 2xl:left-325 ">
+      <Image
+      src={Mandarina} alt="Mandarina" class="md:w-[35px] lg:w-[45px] xl:w-[55px] 2xl:w-[65px] "/>
+    </div>
+    <div class="hidden absolute md:block md:top-53 md:left-30 md:rotate-180 lg:top-100 lg:left-25 xl:top-90 xl:left-45 2xl:top-90 2xl:left-90 ">
+      <Image
+      src={Patilla} alt="Patilla" class="md:w-[25px] lg:w-[35px] xl:w-[45px] 2xl:w-[50px] "/>
+    </div>
+    <div class="hidden absolute md:block md:top-30 md:left-8 md:rotate-250 lg:top-60 2xl:top-60 2xl:left-25 0 ">
+      <Image
+      src={Bomba} alt="Bomba" class="md:w-[45px] lg:w-[55px] xl:w-[65px] 2xl:w-[75px] "/>
+    </div>
+    <div class="hidden absolute md:block md:top-12 md:left-170 md:rotate-45 lg:top-27 lg:left-220 xl:top-15 xl:left-320 2xl:top-20 2xl:left-400  ">
+      <Image
+      src={Uvas} alt="Uvas" class="md:w-[25px] lg:w-[35px] xl:w-[45px] 2xl:w-[50px] "/>
+    </div>
+    <div class="hidden absolute md:block md:top-100 md:left-17 lg:top-170 xl:top-175 xl:left-20 2xl:top-160 2xl:left-45 ">
+      <Image
+      src={Hongo} alt="Hongo" class="md:w-[35px] lg:w-[45px] xl:w-[55px] 2xl:w-[60px] "/>
+    </div>
+    <div class="hidden absolute md:block md:top-105 md:left-90 lg:top-180 lg:left-120 xl:top-182 xl:left-160 2xl:top-180 2xl:left-220 ">
+      <Image
+      src={ProbetaRoja} alt="ProbetaRoja" class=" md:w-[30px] lg:w-[40px] xl:w-[50px] 2xl:w-[50px] "/>
+    </div>
+    <div class="hidden absolute md:block md:top-85 md:left-180 md:rotate-45 lg:top-140 lg:left-240 xl:top-145 xl:left-340  2xl:top-130 2xl:left-420">
+      <Image
+      src={Rayo} alt="Rayo" class="md:w-[25px] lg:w-[35px] 2xl:w-[40px] "/>
+    </div>
     <h1
       class="text-base sm:text-3xl lg:text-6xl lg:mt-30
             text-[#31323D] dark:text-[#F5F5F7]
@@ -24,7 +63,7 @@ import probeta from "@images/Probeta.webp"
       Software a la medida optimizado para SEO. Creamos aplicaciones web y móviles rápidas, escalables y visibles en buscadores. Potencia tu negocio con soluciones que combinan rendimiento, experiencia de usuario y conversión digital.
     </h2>
     <h2 
-      class="hidden lg:block lg:text-xl xl:text- font-bold text-[#131b27] dark:text-[#86868B]"
+      class="hidden w-[80%] lg:block lg:text-[18px] xl:text-[20px] font-bold text-[#131b27] dark:text-[#86868B]"
     >
       Desarrollamos software a la medida optimizado para SEO, asegurando alto rendimiento, escalabilidad y visibilidad en buscadores. Creamos aplicaciones web y móviles con código limpio y estrategias de optimización, mejorando velocidad de carga, experiencia de usuario (UX) y posicionamiento en Google. Implementamos arquitectura eficiente, desarrollo responsivo y técnicas avanzadas como SEO técnico, indexación optimizada y estrategias de conversión digital. Potencia tu negocio con soluciones tecnológicas que no solo funcionan, sino que también destacan en el mercado digital.
     </h2>

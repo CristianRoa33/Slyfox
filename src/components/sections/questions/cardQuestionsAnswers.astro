@@ -1,0 +1,48 @@
+---
+
+import Zorro from "@images/zorro.webp";
+import Image from "astro/components/Image.astro";
+import Questions from "./questionsAnswers.astro";
+---
+<section class="w-full h-full flex justify-center  bg-[#F5F6FA] dark:bg-[#0D0D0D]">
+    <div class="w-[85%] flex flex-col justify-center bg-[#ffffff] m-5 rounded-lg sm:w-[75%] md:flex md:flex-row-reverse md:items-center md:m-15 md:h-[400px] xl:w-[80%] 2xl:w-[60%]">
+        <div class="flex justify-star items-center mt-2 ml-2 md:hidden">
+            <Image 
+                src={Zorro} 
+                alt="" 
+                class="object-contain w-[30px] mr-3"
+            />
+            <h1 class="text-[#15242F] text-[15px] font-bold font-satoshi">
+                <span class="text-[#FF7070]">
+                    Preguntas?
+                </span> <br>
+                    Respuestas.
+                </h1>
+        </div>
+        <div>
+            <Questions />
+        </div>
+        <div class="flex justify-center items-center xl:flex xl:justify-center xl:items-start xl:w-[40%] " >
+        <div class=" flex flex-col justify-center items-center h-50 bg-[#F5F6FA] rounded-2xl m-5 p-2 sm:h-60 md:md:bg-[#FFFFFF] md:flex md:items-center md:mt-5 xl:flex xl:justify-center xl:items-star">
+            <div>
+            <h1 class= " hidden md:block md:text-[#15242F] md:text-[30px] md:font-bold md:font-satoshi xl:text-[35px]  ">
+                <span class="text-[#FF7070]">Preguntas?</span> <br>
+                Respuestas.
+            </h1>
+            </div>
+            <div class=" rounded-full w-12 h-12 bg-[#FFFFFF] flex justify-center items-center sm:mt-3">
+                <Image 
+                    src={Zorro} 
+                    alt="zorro" 
+                    class="object-contain w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]"
+                />
+            </div>
+            <h3 class="flex justify-center text-[12px] w-[80%] text-center mt-5 sm:text-sm md:text-[15px]">Soy un ser Humano como tú  ¡Pregúntame Cualquier cosa!</h3>
+            <div class="flex justify-center text-[12px] bg-[#FFFFFF] mt-8 w-[100%] h-[40px] text-center rounded-2xl p-2 border-1 border-gray-300 font-bold font-satoshi shadow-2xs sm:text-sm sm:w-[90%] md:w-[90%] md:h-[20%] md:text-[10px] xl:text-[15px]">
+                <a href="" class="text-center">Contáctenos</a>
+            </div>
+        </div>  
+        </div>
+    </div>
+</section>
+
