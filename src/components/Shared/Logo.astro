@@ -6,18 +6,14 @@ import LogoDark from "@images/logo-slyfox-dark.webp"
 
 const {width , className=""} = Astro.props;
 ---
-
-
-
 <div style={width ? "width: " + width : ""}>
     <Image 
         class={"dark:hidden inline " + className}
         src={LogoLight} 
         alt="Logo de la empresa Slyfox" 
     />
-
     <Image 
-        class={"hidden dark:inline"+ className}
+        class={"hidden dark:inline " + className}
         src={LogoDark} 
         alt="Una descripción de mi imagen."
     />

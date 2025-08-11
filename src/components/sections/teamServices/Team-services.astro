@@ -1,13 +1,13 @@
 ---
-import imagenDesk from "@images/imagendesk.webp"
+import imagenDesk from "@images/imagendesk.webp";
 import Image from "astro/components/Image.astro";
-import imagenMobile from "@images/imagenmobilepng.webp"
+import imagenMobile from "@images/imagenmobile.webp"
 
 
 ---
 
 <section>
-    <div class="">
+    <div class="hidden lg:block">
         <Image 
             src={imagenDesk} 
             alt="" 
@@ -15,12 +15,25 @@ import imagenMobile from "@images/imagenmobilepng.webp"
         />
     </div>
 </section>
-<section>
-    <div class="hidden">
+<section >
+    <div class="relative w-full h-[105dvh] lg:hidden">
         <Image 
             src={imagenMobile} 
             alt="" 
-            class=""       
+            class="h-full"       
         />
+        <div class="absolute inset-0 flex items-center justify-center px-4 sm:px-6 md:p-10">
+      <div class="backdrop-blur-sm rounded-lg p-4 max-w-[90%] text-left">
+      <h2 class="text-[#FF7070] text-[17px] font-satoshi sm:text-xl md:text-2xl font-bold mb-2">Nuestro equipo</h2>
+      <h3 class="text-[#5DFD80] text-[28px] font-satoshi w-[90%] sm:text-[30px] sm:w-[60%] md:text-[40px] font-bold mb-4">Donde las Ideas se Hacen Realidad</h3>
+      <p class="text-[#F5F5F7] text-[13px] sm:text-base md:text-lg lg:text-xl font-bold">
+        Cada detalle importa. Desde la experiencia del usuario hasta el código que da vida a cada interacción, pasando por la solidez de los sistemas y la estrategia que mantiene todo en marcha. Pensamos, diseñamos, construimos y optimizamos para transformar ideas en soluciones digitales que funcionan, escalan y generan impacto.
+      </p>
     </div>
+  </div>
+</div>
+
+
+
+
 </section>
