@@ -7,7 +7,7 @@ import phonecard from '@images/phonecard2.webp';
 ---
 <section class="hidden md:w-full md:flex md:items-center md:justify-center">
     <div class="bg-[#fbfbfb] dark:bg-[#000000] md:grid md:grid-cols-2 md:gap-10 md:mt-1">
-    <div class="md:flex md:justify-end md:items-center lg:flex lg:justify-end-safe">
+    <div class="card-right md:flex md:justify-end md:items-center lg:flex lg:justify-end-safe">
     <div class="md:bg-[#F5F6FA] md:dark:bg-[#161616] md:rounded-xl md:w-80 md:h-90 md:flex md:flex-col md:justify-baseline lg:w-100 lg:h-100 xl:w-120 xl:h-120">
         <div class=" md:h-[15%] md:flex md:items-center">
         <div 
@@ -87,7 +87,7 @@ import phonecard from '@images/phonecard2.webp';
     </div>    
     </div>
                                                     <!-- Segunda tarjeta -->                                         
-    <div class="md:w-80 md:flex md:flex-col md:mt-10 lg:w-100">
+    <div class="text-left md:w-80 md:flex md:flex-col md:mt-10 lg:w-100">
         <div class="flex items-center space-x-2 ">
             <Image 
                 src={ZapMorado} 
@@ -134,7 +134,7 @@ import phonecard from '@images/phonecard2.webp';
         </div>
     </div>               
     <div class="lg:flex lg:justify-start">
-    <div class="md:bg-[#F5F6FA] md:dark:bg-[#161616] md:rounded-xl md:w-80 md:h-90 lg:w-100 lg:h-100 xl:w-120 xl:h-120 ">
+    <div class="card-left  md:bg-[#F5F6FA] md:dark:bg-[#161616] md:rounded-xl md:w-80 md:h-90 lg:w-100 lg:h-100 xl:w-120 xl:h-120 ">
         <div class=" md:h-[15%] md:flex md:items-center">
         <div 
             class="md:text-[#070707] md:text-[10px]  md:dark:bg-[#282829]  md:pt-1.5 md:rounded-full md:bg-[#b2b2b2] md:w-[110px] md:h-7 md:mt-2 md:ml-5"
@@ -166,3 +166,62 @@ import phonecard from '@images/phonecard2.webp';
 </div>    
 </div>    
 </section> 
+
+
+<style>
+    .card-right {
+        animation-name: left-in ;
+        animation-duration: 1s;
+        animation-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        animation-fill-mode: both;
+    }
+
+    @keyframes left-in {
+        0% {
+            transform: translateX(-700px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .card-left{
+        animation-name: right-in;
+        animation-duration: 1s;
+        animation-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        animation-fill-mode: both;
+    }
+
+    @keyframes right-in {
+        0% {
+            transform: translateX(700px);
+            opacity: 0;
+        }
+        100% {
+            transform:translateX(0px);
+            opacity: 1;
+        }
+    }
+    
+    .text-left { 
+        animation-name: focus-in;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+        animation-fill-mode: both;
+    }
+
+    @keyframes focus-in {
+        0% {
+            filter:blur(12px);
+            opacity: 0 ;
+        }
+        100% {
+            filter:blur(0px); 
+            opacity:1;
+        }
+    }
+
+
+</style>

@@ -19,19 +19,19 @@ const imagenStar= Array.from({length:5})
 
 <style>
 #star1 {
-    animation:pulsate-bck 10s ease-in-out both ;
+    animation:pulsate-bck 10s ease-in-out infinite ;
 }
 #star2 {
-    animation:pulsate-bck 8s ease-in-out both ;
+    animation:pulsate-bck 8s ease-in-out infinite ;
 }
 #star3 {
-    animation:pulsate-bck 6s ease-in-out both ;
+    animation:pulsate-bck 6s ease-in-out infinite ;
 }
 #star4 {
-    animation:pulsate-bck 4s ease-in-out both ;
+    animation:pulsate-bck 4s ease-in-out infinite ;
 }
 #star5 {
-    animation:pulsate-bck 2s ease-in-out both ;
+    animation:pulsate-bck 2s ease-in-out infinite ;
 }
 @keyframes pulsate-bck {
     0%{opacity:0;} 
@@ -54,7 +54,7 @@ const imagenStar= Array.from({length:5})
                     star.style.animation='none';
                     void star.offsetWidth; // Forzar reflujo para reiniciar la animación
                     const durations = [10, 8, 6, 4, 2];
-                    star.style.animation = `pulsate-bck ${durations[index]}s ease-in-out both`;
+                    star.style.animation = `pulsate-bck ${durations[index]}s ease-in-out infinite`;
                 })
                 } else {
                 starElements.forEach((star) => {

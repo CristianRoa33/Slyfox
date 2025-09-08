@@ -18,13 +18,84 @@ const imagenes = [
 ]
 ---
 <div 
-    class="grid grid-cols-6 p-6 w-full bg-[#fbfbfb] dark:bg-[#000000] gap-2 sm:p-9 
+    class="phones grid grid-cols-6 p-6 w-full bg-[#fbfbfb] dark:bg-[#000000] gap-2 sm:p-9 
     lg:p-12 xl:p-18 2xl:p-25"
 >
     {imagenes.map((imagen, index)=>(
         <Image 
             src={imagen.src} 
             alt={`imagen ${index + 1}`}
+            class = {` transform 
+                        ${index === 0? 'translate-y-11 animate-Image170':''}
+                        ${index === 1? 'translate-y-8 animate-Image171':''}
+                        ${index === 2? 'translate-y-5 animate-Image172':''}
+                        ${index === 3? 'translate-y-3 animate-Image169':''}
+                        ${index === 4? 'translate-y-1 animate-Image173':''} 
+                        ${index === 5? 'translate-y-1 animate-Image174':''}
+                    `} 
         />
     ))}
 </div>
+
+<style>
+
+    .animate-Image170 {
+    animation: reveal ;
+    animation-duration : 1s ;
+    animation-timing-function: ease-out ;
+
+    
+    }
+    
+    .animate-Image171 {
+    animation: reveal ;
+    animation-duration : 2s ;
+    animation-timing-function: ease-out ; 
+   
+    
+    }
+    .animate-Image172 {
+    animation: reveal ;
+    animation-duration : 3s ;
+    animation-timing-function: ease-out ; 
+    
+    
+    }
+
+    .animate-Image169 {
+    animation: reveal ;
+    animation-duration : 4s ;
+    animation-timing-function: ease-out ; 
+    
+    }
+
+    .animate-Image173 {
+    animation: reveal ;
+    animation-duration : 5s ;
+    animation-timing-function: ease-out ; 
+    
+    }
+
+    .animate-Image174 {
+    animation: reveal ;
+    animation-duration : 6s ;
+    animation-timing-function: ease-out ; 
+    
+    }
+
+
+  @keyframes reveal {
+    0% {
+    transform: translateY(100px);
+    opacity: 0;
+    }
+    50 % {
+    transform: translateY(50px);   
+    opacity: .4; 
+    }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+</style>

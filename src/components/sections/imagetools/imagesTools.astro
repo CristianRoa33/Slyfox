@@ -40,7 +40,7 @@ export const imagenes = [
             <Image  
                 src={img.src} 
                 alt={img.alt} title={img.title}
-                class="object-contain w-full  max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[90px] xl:max-w-[110px] img-hover-grow" 
+                class="object-contain w-full  max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[90px] xl:max-w-[110px] img" 
             />
             </div>
         ))}
@@ -72,12 +72,13 @@ export const imagenes = [
     align-items: flex-start;
 }
 
-.img-hover-grow:hover {
-    transform: scale(1.3);
-    
+.img {
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+     cursor: pointer;
 }
-
-
-
+.img:hover {
+    scale: 1.3;
+}
 
 </style>

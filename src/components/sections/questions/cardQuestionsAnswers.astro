@@ -5,43 +5,67 @@ import Image from "astro/components/Image.astro";
 import Questions from "./questionsAnswers.astro";
 ---
 <section class="w-full h-full flex justify-center  bg-[#F5F6FA] dark:bg-[#0D0D0D]">
-    <div class="w-[85%] flex flex-col justify-center bg-[#ffffff] m-5 rounded-lg sm:w-[75%] md:flex md:flex-row-reverse md:items-center md:m-15 md:h-[400px] xl:w-[80%] 2xl:w-[60%]">
+    <!-- respuestas y preguntas hasta movile 640px-->
+    <div class="w-[85%] flex flex-col justify-center bg-[#FFFFFF] m-5 rounded-lg md:hidden sm:w-[85%]">
         <div class="flex justify-star items-center mt-2 ml-2 md:hidden">
             <Image 
                 src={Zorro} 
                 alt="" 
                 class="object-contain w-[30px] mr-3"
             />
-            <h1 class="text-[#15242F] text-[15px] font-bold font-satoshi">
+            <h2 class="text-[#15242F] text-[15px] font-bold font-satoshi">
                 <span class="text-[#FF7070]">
                     Preguntas?
                 </span> <br>
                     Respuestas.
-                </h1>
+            </h2>
         </div>
-        <div>
+        <div class="md:w-[100%] md:h-[300px] mr-2">
             <Questions />
         </div>
-        <div class="flex justify-center items-center xl:flex xl:justify-center xl:items-start xl:w-[40%] " >
-        <div class=" flex flex-col justify-center items-center h-50 bg-[#F5F6FA] rounded-2xl m-5 p-2 sm:h-60 md:md:bg-[#FFFFFF] md:flex md:items-center md:mt-5 xl:flex xl:justify-center xl:items-star">
-            <div>
-            <h1 class= " hidden md:block md:text-[#15242F] md:text-[30px] md:font-bold md:font-satoshi xl:text-[35px]  ">
+        <div class="flex justify-center" >
+            <div class="flex flex-col justify-between items-center gap-y-1 h-50 bg-[#F5F6FA] rounded-2xl m-5 p-2 sm:h-60 sm:w-[60%]">
+                <div class=" rounded-full w-12 h-14 bg-[#FFFFFF] flex justify-center items-center mt-3">
+                    <Image 
+                        src={Zorro} 
+                        alt="zorro" 
+                        class="object-contain w-[30px] h-[30px] sm:w-[50px] sm:h-[50px]"
+                    />
+                </div>
+                <h3 class="flex justify-center text-[12px] md:w-[80%] text-center mt-5 sm:text-sm md:text-lg md:mt-5">
+                    Soy un ser Humano como tú  ¡Pregúntame Cualquier cosa!
+                </h3>
+                <div class="flex justify-center text-[12px] bg-[#FFFFFF] mt-8 w-[100%] h-[40px] text-center rounded-2xl p-2 border-1 border-gray-300 font-bold font-satoshi shadow-2xs sm:text-sm sm:w-[90%]">
+                <a href="" class="text-center">Contáctenos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden md:flex m-15 md:mt-25 md:mb-25 rounded-lg md:bg-[#FFFFFF] xl:mt-30 xl:mb-30">
+        <div class="flex flex-col items-center justify-center ">
+            <h2 class= "md:flex-col md:text-[#15242F] md:text-center md:text-[35px] md:font-bold md:font-satoshi md:mt-3 lg:text-[50px] xl:text-[55px] 2xl:text-[60px]">
                 <span class="text-[#FF7070]">Preguntas?</span> <br>
                 Respuestas.
-            </h1>
+            </h2>
+            <Image 
+                src={Zorro} 
+                alt="zorro" 
+                class="object-contain md:w-[25px] md:h-[25px] lg:w-[35px] lg:h-[35px] xl:w-[45px] xl:h-[45px] md:mt-10"
+            />
+            <h3 class="flex justify-center text-[12px] md:w-[70%] text-center mt-2 md:text-lg lg:text-[20px] md:mt-5">
+                Soy un ser Humano como tú  ¡Pregúntame Cualquier cosa!
+            </h3>
+            <div class="flex justify-center text-[12px] bg-[#FFFFFF] mt-5 mb-5 w-[100%] h-[40px] text-center rounded-2xl 
+                p-2 border-1 border-gray-300 font-bold font-satoshi shadow-2xs sm:text-sm md:w-[70%]"
+            >
+                <a href="" class="text-center"
+                >
+                Contáctenos
+                </a>
             </div>
-            <div class=" rounded-full w-12 h-12 bg-[#FFFFFF] flex justify-center items-center sm:mt-3">
-                <Image 
-                    src={Zorro} 
-                    alt="zorro" 
-                    class="object-contain w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]"
-                />
-            </div>
-            <h3 class="flex justify-center text-[12px] w-[80%] text-center mt-5 sm:text-sm md:text-[15px]">Soy un ser Humano como tú  ¡Pregúntame Cualquier cosa!</h3>
-            <div class="flex justify-center text-[12px] bg-[#FFFFFF] mt-8 w-[100%] h-[40px] text-center rounded-2xl p-2 border-1 border-gray-300 font-bold font-satoshi shadow-2xs sm:text-sm sm:w-[90%] md:w-[90%] md:h-[20%] md:text-[10px] xl:text-[15px]">
-                <a href="" class="text-center">Contáctenos</a>
-            </div>
-        </div>  
+        </div>
+        <div class="w-[500px] mt-5 lg:w-[500px] xl:w-[600px]">
+            <Questions />
         </div>
     </div>
 </section>

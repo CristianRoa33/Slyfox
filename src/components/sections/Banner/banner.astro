@@ -39,15 +39,6 @@ import Textdesk from "@components/sections/Banner/bannerDataDesk.astro"
 </section>    
 
 
-
-
-
-
-
-
-
-
-
 <style>
     
     #slide {
@@ -55,12 +46,22 @@ import Textdesk from "@components/sections/Banner/bannerDataDesk.astro"
     }
 
     @keyframes slide-up {
-    from {
-        transform: translatey(200px);
-    } to {
-        transform: translatey(0);
-    }
-    }
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 </style>
 
