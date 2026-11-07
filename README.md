@@ -1,48 +1,34 @@
-# Astro Starter Kit: Basics
+# 🦊 Slyfox – Landing Page
 
-```sh
-npm create astro@latest -- --template basics
+Landing page desarrollada para **Slyfox**, empresa colombiana de desarrollo de software a la medida, integración de canales, diseño UX/UI y seguridad.
+
+> 📌 Este repositorio contiene la **versión inicial que desarrollé, presenté y fue aprobada por el cliente**.
+> El sitio en producción ha evolucionado desde entonces: [slyfox.com.co](https://www.slyfox.com.co/)
+
+## 🛠️ Tecnologías
+
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+## 👨‍💻 Mi rol
+
+Proyecto desarrollado en pareja. Mi compañero inició la base del proyecto y yo desarrollé **la mayor parte del sitio**, incluyendo:
+
+- Construcción de la mayoría de secciones y componentes
+- **Diseño responsive** completo (móvil, tablet y escritorio)
+- Animaciones de la interfaz
+
+## 💡 Retos y aprendizajes
+
+Los mayores retos fueron **las animaciones** y **adaptar el diseño a todos los tamaños de pantalla**. Este proyecto me permitió trabajar con un cliente real: entregas, ajustes según retroalimentación y presentación final.
+
+## 🚀 Ejecutar localmente
+
+```bash
+npm install
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Abre `http://localhost:4321` en tu navegador.
